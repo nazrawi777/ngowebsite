@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="Awaiken">
-	<!-- Page Title -->
-    <title>Lenity - Charity & Donation HTML Template</title>
-	<!-- Favicon Icon -->
+	 <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- EDIT: Page title and meta description for SEO -->
+  <title>Our Services | Hulegeb - Building Skills, Creating Opportunities</title>
+  <meta name="description" content="Hulegeb provides vocational training, milling services, advocacy, and production manufacturing to empower blind and physically disabled individuals in Ethiopia.">
+  
+  <!-- EDIT: Open Graph tags for social sharing -->
+  <meta property="og:title" content="Our Services | Hulegeb">
+  <meta property="og:description" content="Building skills, creating opportunities, advocating change for persons with disabilities in Ethiopia.">
+  <meta property="og:type" content="website">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/services.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 	<!-- Google Fonts Css-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +37,7 @@
 	<!-- Main Custom Css -->
 	<link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
-<body>
+<body class="services-vars">
 
     <!-- Preloader Start -->
 	<div class="preloader">
@@ -45,7 +49,7 @@
 	<!-- Preloader End -->
 
     <!-- Header Start -->
-	<header class="main-header">
+<header class="main-header">
 		<div class="header-sticky">
 			<nav class="navbar navbar-expand-lg">
 				<div class="container">
@@ -59,30 +63,23 @@
 					<div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item submenu"><a class="nav-link" href="index.html">Home</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="index.html">Home - Image</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-video.html">Home - Video</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-slider.html">Home - Slider</a></li>
+                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
+                                <li class="nav-item submenu"><a class="nav-link" href="#">About</a>
+                                    <ul>                                        
+                                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="ourhistory.html">Our Legacy</a></li>
+                                       
                                     </ul>
-                                </li>                                
-                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
+                                </li>                              
+                                
                                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="services.html#">Pages</a>
+                                <li class="nav-item submenu"><a class="nav-link" href="index-slider.html#">Pages</a>
                                     <ul>                                        
-                                        <li class="nav-item"><a class="nav-link" href="service-single.html">Service Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="programmes.html">Our Programmes</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="program-single.html">Program Details</a></li>
                                         <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team-single.html">Team Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="image-gallery.html">Image Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="video-gallery.html">Video Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="programmes.html">Our Programs</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="video-gallery.html">Gallery</a></li>
                                         <li class="nav-item"><a class="nav-link" href="donation.html">Donation</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>                         
@@ -107,637 +104,551 @@
 			<div class="responsive-menu"></div>
 		</div>
 	</header>
+
+    <header class="services-hero">
+    <div class="services-hero__background">
+      <!-- EDIT: Replace hero image here -->
+      <img 
+        src="images/placeholder-hero.jpg" 
+        alt="Skilled artisans with disabilities weaving traditional carpets in Hulegeb's workshop"
+        loading="eager"
+      >
+    </div>
+    <div class="services-hero__overlay" aria-hidden="true"></div>
+    <div class="services-container services-hero__content">
+      <!-- EDIT: Change hero headline text here -->
+      <h1 class="services-hero__headline">
+        Our Services: Building Skills, Creating Opportunities, Advocating Change
+      </h1>
+      <!-- EDIT: Change hero subheading text here -->
+      <p class="services-hero__subheading">
+        At Hulegeb, our services are designed to empower, employ, and elevate blind and physically disabled individuals in Ethiopia. We move beyond traditional aid models by offering integrated, market-aligned services that build real pathways to independence and inclusion.
+      </p>
+      <div class="services-hero__ctas">
+        <a href="#products" class="btn btn--primary" aria-label="Browse our products">
+          Shop Our Products
+        </a>
+        <a href="#partner" class="btn btn--secondary" aria-label="Partner with Hulegeb">
+          Partner With Us
+        </a>
+        <a href="#about" class="btn btn--tertiary" aria-label="Learn about our story">
+          Learn Our Story
+        </a>
+      </div>
+    </div>
+  </header>
 	<!-- Header End -->
-
-    <!-- Page Header Start -->
-    <div class="page-header parallaxie">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 class="text-anime-style-2" data-cursor="-opaque"><span>Our</span> services</h1>
-                        <nav class="wow fadeInUp">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">services</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <!-- Page Header Box End -->
-                </div>
-            </div>
+ <main id="main-content">
+    <!-- ==========================================================================
+         SERVICES SECTION
+         ========================================================================== -->
+    <section class="services-section" aria-labelledby="services-heading">
+      <div class="services-container">
+        <div class="reveal-on-scroll">
+          <h2 id="services-heading" class="services-section__heading">
+            What We Offer
+          </h2>
+          <p class="services-section__intro">
+            Our comprehensive services create pathways to independence through skills training, 
+            production, community services, and systemic advocacy.
+          </p>
         </div>
-    </div>
-    <!-- Page Header End -->
 
-    <!-- Page Services Start -->
-    <div class="page-services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <!-- Services Item Start -->
-                    <div class="service-item wow fadeInUp">
-                        <div class="service-content">
-                            <h3><a href="service-single.html">food security initiatives</a></h3>
-                            <p>Addressing hunger and malnutrition by providing nutritious meals</p>
-                        </div>
-                        <div class="service-image">
-                            <figure class="image-anime">
-                                <img src="images/services-image-1.jpg" alt="">
-                            </figure>
-                        </div>
-                        <div class="service-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Services Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Services Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-content">
-                            <h3><a href="service-single.html">healthcare access</a></h3>
-                            <p>Addressing hunger and malnutrition by providing nutritious meals</p>
-                        </div>
-                        <div class="service-image">
-                            <figure class="image-anime">
-                                <img src="images/services-image-2.jpg" alt="">
-                            </figure>
-                        </div>
-                        <div class="service-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Services Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Services Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-content">
-                            <h3><a href="service-single.html">educational support</a></h3>
-                            <p>Addressing hunger and malnutrition by providing nutritious meals</p>
-                        </div>
-                        <div class="service-image">
-                            <figure class="image-anime">
-                                <img src="images/services-image-3.jpg" alt="">
-                            </figure>
-                        </div>
-                        <div class="service-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Services Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Services Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-content">
-                            <h3><a href="service-single.html">hunger relief</a></h3>
-                            <p>Addressing hunger and malnutrition by providing nutritious meals</p>
-                        </div>
-                        <div class="service-image">
-                            <figure class="image-anime">
-                                <img src="images/services-image-4.jpg" alt="">
-                            </figure>
-                        </div>
-                        <div class="service-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Services Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Services Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="service-content">
-                            <h3><a href="service-single.html">women empowerment</a></h3>
-                            <p>Addressing hunger and malnutrition by providing nutritious meals</p>
-                        </div>
-                        <div class="service-image">
-                            <figure class="image-anime">
-                                <img src="images/services-image-5.jpg" alt="">
-                            </figure>
-                        </div>
-                        <div class="service-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Services Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Services Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="1s">
-                        <div class="service-content">
-                            <h3><a href="service-single.html">Youth leadership programs</a></h3>
-                            <p>Addressing hunger and malnutrition by providing nutritious meals</p>
-                        </div>
-                        <div class="service-image">
-                            <figure class="image-anime">
-                                <img src="images/services-image-6.jpg" alt="">
-                            </figure>
-                        </div>
-                        <div class="service-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Services Item End -->
-                </div>
+        <div class="services-grid">
+          
+          <!-- SERVICE 1: Vocational Training -->
+          <article class="service-card reveal-on-scroll">
+            <div class="service-card__icon">
+              <!-- EDIT: Weaving/loom icon -->
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="4" y="4" width="24" height="24" rx="2"></rect>
+                <line x1="4" y1="10" x2="28" y2="10"></line>
+                <line x1="4" y1="16" x2="28" y2="16"></line>
+                <line x1="4" y1="22" x2="28" y2="22"></line>
+                <line x1="10" y1="4" x2="10" y2="28"></line>
+                <line x1="16" y1="4" x2="16" y2="28"></line>
+                <line x1="22" y1="4" x2="22" y2="28"></line>
+              </svg>
             </div>
+            <span class="service-card__number">Service 1</span>
+            <h3 class="service-card__title">Vocational Training & Skills Development</h3>
+            <p class="service-card__description">We provide hands-on, adaptive training programs that prepare individuals for sustainable livelihoods.</p>
+            
+            <div class="accordion">
+              <!-- What We Offer Accordion -->
+              <div class="accordion__item" data-state="closed">
+                <button class="accordion__trigger" aria-expanded="false">
+                  <span>What We Offer</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__icon" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__inner">
+                    <ul class="services-list">
+                      <li class="services-list__item"><strong>Weaving & Carpet Making:</strong> Traditional hand-weaving techniques using natural wool and cotton</li>
+                      <li class="services-list__item"><strong>Woodworking & Furniture Crafting:</strong> From basic carpentry to custom furniture production</li>
+                      <li class="services-list__item"><strong>Artisan Craft Production:</strong> Brush, broom, mop, and household item manufacturing</li>
+                      <li class="services-list__item"><strong>Textile Production:</strong> Bedding, curtains, towels, and fabric weaving</li>
+                      <li class="services-list__item"><strong>Milling Operations:</strong> Grain and material processing using modern equipment</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Training Approach Accordion -->
+              <div class="accordion__item" data-state="closed">
+                <button class="accordion__trigger" aria-expanded="false">
+                  <span>Our Training Approach</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__icon" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__inner">
+                    <ul class="services-list">
+                      <li class="services-list__item"><strong>Learn-by-Doing Model:</strong> Trainees work directly in production workshops</li>
+                      <li class="services-list__item"><strong>Adapted Tools & Workstations:</strong> Customized for varying abilities</li>
+                      <li class="services-list__item"><strong>Mentor-Led Instruction:</strong> Experienced artisans guide each learner</li>
+                      <li class="services-list__item"><strong>Entrepreneurship Training:</strong> Business skills for self-employment</li>
+                      <li class="services-list__item"><strong>Workplace Safety & Quality Control:</strong> Professional standards education</li>
+                    </ul>
+                    <p style="margin-top: 16px; font-style: italic; color: #2D5A47;">
+                      <strong>Outcome:</strong> Graduates are equipped for employment within Hulegeb, with other employers, or to start their own enterprises.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SERVICE 2: Milling Service -->
+          <article class="service-card reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="service-card__icon">
+              <!-- EDIT: Mill/gear icon -->
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="16" cy="16" r="3"></circle>
+                <path d="M16 4v4M16 24v4M6.34 6.34l2.83 2.83M22.83 22.83l2.83 2.83M4 16h4M24 16h4M6.34 25.66l2.83-2.83M22.83 9.17l2.83-2.83"></path>
+              </svg>
+            </div>
+            <span class="service-card__number">Service 2</span>
+            <h3 class="service-card__title">Milling Service</h3>
+            <p class="service-card__description">Our community-focused milling operation supports local food security while providing employment and training.</p>
+            
+            <div class="accordion">
+              <div class="accordion__item" data-state="closed">
+                <button class="accordion__trigger" aria-expanded="false">
+                  <span>Service Details</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__icon" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__inner">
+                    <ul class="services-list">
+                      <li class="services-list__item"><strong>5 Modern Milling Machines:</strong> Efficient processing of grains and materials</li>
+                      <li class="services-list__item"><strong>Operated by Trained Artisans:</strong> Including blind and physically disabled individuals</li>
+                      <li class="services-list__item"><strong>Affordable & Accessible:</strong> Serving local households and small businesses</li>
+                      <li class="services-list__item"><strong>Dual Purpose Platform:</strong> Functional service + vocational training environment</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion__item" data-state="closed">
+                <button class="accordion__trigger" aria-expanded="false">
+                  <span>Impact</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__icon" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__inner">
+                    <ul class="services-list">
+                      <li class="services-list__item">Provides essential community service</li>
+                      <li class="services-list__item">Generates operational revenue</li>
+                      <li class="services-list__item">Offers practical vocational experience</li>
+                      <li class="services-list__item">Demonstrates inclusive employment in action</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SERVICE 3: Advocacy -->
+          <article class="service-card reveal-on-scroll" style="transition-delay: 200ms;">
+            <div class="service-card__icon">
+              <!-- EDIT: Megaphone/advocacy icon -->
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 11l18-5v20L3 21V11z"></path>
+                <path d="M11 21v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4"></path>
+                <path d="M21 9a4 4 0 0 1 0 8"></path>
+                <path d="M25 6a8 8 0 0 1 0 14"></path>
+              </svg>
+            </div>
+            <span class="service-card__number">Service 3</span>
+            <h3 class="service-card__title">Advocacy & Awareness Services</h3>
+            <p class="service-card__description">We work to transform systems, perceptions, and policies to create a more inclusive society.</p>
+            
+            <div class="accordion">
+              <div class="accordion__item" data-state="closed">
+                <button class="accordion__trigger" aria-expanded="false">
+                  <span>Our Advocacy Work</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__icon" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__inner">
+                    <ul class="services-list">
+                      <li class="services-list__item"><strong>Policy Engagement:</strong> Collaborating with government bodies on disability-inclusive legislation</li>
+                      <li class="services-list__item"><strong>Community Awareness:</strong> Workshops and campaigns to challenge stereotypes</li>
+                      <li class="services-list__item"><strong>Corporate Inclusion Consulting:</strong> Advising businesses on accessible hiring and workplaces</li>
+                      <li class="services-list__item"><strong>Media Partnership:</strong> Amplifying disabled voices and stories</li>
+                      <li class="services-list__item"><strong>Network Building:</strong> Connecting disability organizations for collective impact</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion__item" data-state="closed">
+                <button class="accordion__trigger" aria-expanded="false">
+                  <span>Advocacy Outcomes</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__icon" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__inner">
+                    <ul class="services-list">
+                      <li class="services-list__item">Increased public awareness of disability rights</li>
+                      <li class="services-list__item">More inclusive local and national policies</li>
+                      <li class="services-list__item">Greater private sector engagement with disability inclusion</li>
+                      <li class="services-list__item">Stronger disability community representation</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SERVICE 4: Production -->
+          <article class="service-card reveal-on-scroll" style="transition-delay: 300ms;">
+            <div class="service-card__icon">
+              <!-- EDIT: Tools icon -->
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <span class="service-card__number">Service 4</span>
+            <h3 class="service-card__title">Production & Manufacturing Services</h3>
+            <p class="service-card__description">Our workshops produce high-quality, market-ready goods while functioning as living classrooms.</p>
+            
+            <div class="accordion">
+              <div class="accordion__item" data-state="closed">
+                <button class="accordion__trigger" aria-expanded="false">
+                  <span>Production Areas</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__icon" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__inner">
+                    <ul class="services-list">
+                      <li class="services-list__item"><strong>Carpet & Rug Weaving:</strong> Custom and standard sizes</li>
+                      <li class="services-list__item"><strong>Furniture Manufacturing:</strong> Custom orders and standard pieces</li>
+                      <li class="services-list__item"><strong>Household Goods:</strong> Brushes, mops, brooms, and textiles</li>
+                      <li class="services-list__item"><strong>Contract Manufacturing:</strong> Custom production for businesses and organizations</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion__item" data-state="closed">
+                <button class="accordion__trigger" aria-expanded="false">
+                  <span>Service Benefits</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__icon" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__inner">
+                    <ul class="services-list">
+                      <li class="services-list__item"><strong>For Businesses:</strong> Ethically produced, high-quality goods with social impact</li>
+                      <li class="services-list__item"><strong>For Trainees:</strong> Real-world production experience</li>
+                      <li class="services-list__item"><strong>For Community:</strong> Sustainable employment opportunities</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SERVICE 5: Custom Design -->
+          <article class="service-card reveal-on-scroll" style="transition-delay: 400ms;">
+            <div class="service-card__icon">
+              <!-- EDIT: Weaving icon (reused for custom design) -->
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="4" y="4" width="24" height="24" rx="2"></rect>
+                <line x1="4" y1="10" x2="28" y2="10"></line>
+                <line x1="4" y1="16" x2="28" y2="16"></line>
+                <line x1="4" y1="22" x2="28" y2="22"></line>
+                <line x1="10" y1="4" x2="10" y2="28"></line>
+                <line x1="16" y1="4" x2="16" y2="28"></line>
+                <line x1="22" y1="4" x2="22" y2="28"></line>
+              </svg>
+            </div>
+            <span class="service-card__number">Service 5</span>
+            <h3 class="service-card__title">Custom Design & Manufacturing</h3>
+            <p class="service-card__description">We collaborate with clients to create bespoke products that meet specific needs.</p>
+            
+            <div class="accordion">
+              <div class="accordion__item" data-state="closed">
+                <button class="accordion__trigger" aria-expanded="false">
+                  <span>Custom Services Include</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__icon" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__inner">
+                    <ul class="services-list">
+                      <li class="services-list__item"><strong>Product Development:</strong> From concept to finished product</li>
+                      <li class="services-list__item"><strong>Material Selection:</strong> Sustainable, local material sourcing</li>
+                      <li class="services-list__item"><strong>Adaptive Design:</strong> Products designed for accessibility</li>
+                      <li class="services-list__item"><strong>Bulk Order Production:</strong> For retailers, hotels, offices, and institutions</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SERVICE 6: Partnership -->
+          <article class="service-card reveal-on-scroll" style="transition-delay: 500ms;">
+            <div class="service-card__icon">
+              <!-- EDIT: Handshake icon -->
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 6l-4-2H6l-2 6 6 6 6-4"></path>
+                <path d="M16 6l4-2h6l2 6-6 6-6-4"></path>
+                <path d="M10 12l6 10 6-10"></path>
+                <circle cx="16" cy="24" r="2"></circle>
+              </svg>
+            </div>
+            <span class="service-card__number">Service 6</span>
+            <h3 class="service-card__title">Partnership & Capacity Building Services</h3>
+            <p class="service-card__description">We share our model and expertise with organizations seeking to enhance their disability inclusion.</p>
+            
+            <div class="accordion">
+              <div class="accordion__item" data-state="closed">
+                <button class="accordion__trigger" aria-expanded="false">
+                  <span>We Offer</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__icon" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion__content">
+                  <div class="accordion__inner">
+                    <ul class="services-list">
+                      <li class="services-list__item"><strong>Organizational Consultations:</strong> On disability-inclusive programming</li>
+                      <li class="services-list__item"><strong>Training of Trainers:</strong> Building capacity in other institutions</li>
+                      <li class="services-list__item"><strong>Model Replication Support:</strong> Adapting Hulegeb's approach for new contexts</li>
+                      <li class="services-list__item"><strong>Impact Assessment:</strong> Disability inclusion evaluation and planning</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div>
-    </div>
-    <!-- Page Services End -->
+      </div>
+    </section>
 
-    <!-- Why Choose Us Section Start -->
-    <div class="why-choose-us service-why-choose-us">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Why Choose Images Start -->
-                    <div class="why-choose-images">
-                        <div class="why-choose-image-1">
-                            <figure class="image-anime">
-                                <img src="images/why-choose-img-1.jpg" alt="">
-                            </figure>
-                        </div>
-                        <div class="why-choose-image-2">
-                            <figure class="image-anime">
-                                <img src="images/why-choose-img-2.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <!-- Why Choose Images End -->
-                </div>
-                
-                <div class="col-lg-6">
-                    <!-- Why Choose Content Start -->
-                    <div class="why-choose-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">why choose us</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Why we stand out together</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our dedication, transparency, and community-driven approach set us apart. partnering with us,programs that create meaningful change.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Why Choose List Start -->
-                        <div class="why-choose-list wow fadeInUp" data-wow-delay="0.4s">
-                            <ul>
-                                <li>community-centered approach</li>
-                                <li>transparency and accountability</li>
-                                <li>empowerment through partner</li>
-                                <li>volunteer and donor engagement</li>
-                            </ul>
-                        </div>
-                        <!-- Why Choose List End -->
-
-                        <!-- Why Choose Counters Start -->
-                        <div class="why-choose-counters">
-                            <!-- Why Choose Counters Item Start -->
-                            <div class="why-choose-counter-item">
-                                <h2><span class="counter">25</span>+</h2>
-                                <p>Years of experience</p>
-                            </div>
-                            <!-- Why Choose Counters Item End -->
-                            
-                            <!-- Why Choose Counters Item Start -->
-                            <div class="why-choose-counter-item">
-                                <h2><span class="counter">230</span>+</h2>
-                                <p>Thousands volunteers</p>
-                            </div>
-                            <!-- Why Choose Counters Item End -->
-                            
-                            <!-- Why Choose Counters Item Start -->
-                            <div class="why-choose-counter-item">
-                                <h2><span class="counter">400</span>+</h2>
-                                <p>Word wide office</p>
-                            </div>
-                            <!-- Why Choose Counters Item End -->
-                        </div>
-                        <!-- Why Choose Counters End -->
-                    </div>
-                    <!-- Why Choose Content End -->
-                </div>
-            </div>
+    <!-- ==========================================================================
+         FEATURES SECTION - Why Choose Hulegeb
+         ========================================================================== -->
+    <section class="services-section features-section" aria-labelledby="features-heading">
+      <div class="services-container">
+        <div class="reveal-on-scroll">
+          <h2 id="features-heading" class="services-section__heading">
+            Why Choose Hulegeb Services?
+          </h2>
+          <p class="services-section__intro">
+            Hulegeb is more than a social enterprise—it's a proven model of disability-led 
+            empowerment built on decades of resilience, innovation, and integrity.
+          </p>
         </div>
-    </div>
-    <!-- Why Choose Us Section End -->
 
-    <!-- Our Features Section Start -->
-    <div class="our-features">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">our feature</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Highlights our impactful work</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Discover the positive change we've created through our programs, partnerships, and dedicated efforts. From healthcare and education to environmental sustainability.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Our Features List Start -->
-                    <div class="our-features-list">
-                        <!-- Our Features Item Start -->
-                        <div class="our-features-item">
-                            <!-- Our Features Image Start -->
-                            <div class="our-features-image">
-                                <figure class="image-anime reveal">
-                                    <img src="images/our-features-img-1.jpg" alt="">
-                                </figure>
-                            </div>
-                            <!-- Our Features Image End -->
-
-                            <!-- Our Features Content Start -->
-                            <div class="our-features-content">
-                                <div class="our-features-body">
-                                    <h2><span class="counter">96</span>%</h2>
-                                    <h3>healthcare support</h3>
-                                    <p>Provide essential healthcare services and resources to communities.</p>
-                                </div>
-                                <div class="icon-box">
-                                    <img src="images/icon-our-features-1.svg" alt="">
-                                </div>
-                            </div>
-                            <!-- Our Features Content End -->
-                        </div>
-                        <!-- Our Features Item End -->
-
-                        <!-- Our Features Item Start -->
-                        <div class="our-features-item">
-                            <!-- Our Features Image Start -->
-                            <div class="our-features-image">
-                                <figure class="image-anime reveal">
-                                    <img src="images/our-features-img-2.jpg" alt="">
-                                </figure>
-                            </div>
-                            <!-- Our Features Image End -->
-
-                            <!-- Our Features Content Start -->
-                            <div class="our-features-content">
-                                <div class="our-features-body">
-                                    <h2><span class="counter">94</span>%</h2>
-                                    <h3>education support</h3>
-                                    <p>Provide essential healthcare services and resources to communities.</p>
-                                </div>
-                                <div class="icon-box">
-                                    <img src="images/icon-our-features-2.svg" alt="">
-                                </div>
-                            </div>
-                            <!-- Our Features Content End -->
-                        </div>
-                        <!-- Our Features Item End -->
-
-                        <!-- Our Features Item Start -->
-                        <div class="our-features-item">
-                            <!-- Our Features Image Start -->
-                            <div class="our-features-image">
-                                <figure class="image-anime reveal">
-                                    <img src="images/our-features-img-3.jpg" alt="">
-                                </figure>
-                            </div>
-                            <!-- Our Features Image End -->
-
-                            <!-- Our Features Content Start -->
-                            <div class="our-features-content">
-                                <div class="our-features-body">
-                                    <h2><span class="counter">95</span>%</h2>
-                                    <h3>food support</h3>
-                                    <p>Provide essential healthcare services and resources to communities.</p>
-                                </div>
-                                <div class="icon-box">
-                                    <img src="images/icon-our-features-3.svg" alt="">
-                                </div>
-                            </div>
-                            <!-- Our Features Content End -->
-                        </div>
-                        <!-- Our Features Item End -->
-                    </div>
-                    <!-- Our Features List End -->
-                </div>
-            </div>
+        <!-- Stats Grid -->
+        <div class="stats-grid reveal-on-scroll">
+          <div class="stat-card">
+            <div class="stat-card__number">70+</div>
+            <div class="stat-card__label">Years of Excellence</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number">80%</div>
+            <div class="stat-card__label">Staff with Disabilities</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number">85</div>
+            <div class="stat-card__label">Trained Artisans</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number">28K</div>
+            <div class="stat-card__label">Sq.m Land</div>
+          </div>
         </div>
-    </div>
-    <!-- Our Features Section End -->
 
-    <!-- Our Testimonials Section Start -->
-    <div class="our-testimonials">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Testimonials Image Start -->
-                    <div class="testimonials-image">
-                        <div class="testimonials-img">
-                            <figure class="image-anime reveal">
-                                <img src="images/testimonials-image.jpg" alt="">
-                            </figure>
-                        </div>
-
-                        <div class="helthcare-support-circle">
-                            <a href="contact.html">
-                                <img src="images/healthcare-support-circle.svg" alt="">
-                            </a>
-                        </div>
-
-                        <div class="client-review-box">
-                            <h2><span class="counter">20</span>k</h2>
-                            <p>customer review</p>
-                        </div> 
-                    </div>
-                    <!-- Testimonials Image End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Testimonials Content Start -->
-                    <div class="testimonials-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">testimonials</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">What people say about us</h2>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Testimonial Slider Start -->
-                        <div class="testimonial-slider">
-                            <div class="swiper">
-                                <div class="swiper-wrapper" data-cursor-text="Drag">
-                                    <!-- Testimonial Slide Start -->
-                                    <div class="swiper-slide">
-                                        <!-- Testimonial Item Start -->
-                                        <div class="testimonial-item">
-                                            <!-- Testimonial Header Start -->
-                                            <div class="testimonial-header">
-                                                <!-- Author Info Start -->
-                                                <div class="author-info">
-                                                    <!-- Author Image Start -->
-                                                    <div class="author-image">
-                                                        <figure class="image-anime">
-                                                            <img src="images/author-1.jpg" alt="">
-                                                        </figure>
-                                                    </div>    
-                                                    <!-- Author Image End -->
-
-                                                    <!-- Author Content Start -->
-                                                    <div class="author-content">
-                                                        <h3>eleanor pena</h3>
-                                                        <p>volunteer coordinator</p>
-                                                    </div>
-                                                    <!-- Author Content End -->
-                                                </div>
-                                                <!-- Author Info Author End -->
-                                                
-                                                <!-- Testimonial Rating Start -->
-                                                <div class="testimonial-rating">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                                <!-- Testimonial Rating End -->
-                                            </div>
-                                            <!-- Testimonial Header End -->
-                                            
-                                            <!-- Testimonial Content Start -->
-                                            <div class="testimonial-content">
-                                                <p>"Working with [NGO Name] has been a truly inspiring experience. Their dedication to uplifting communities and creating sustainable change is unmatched. Through their programs, I've seen lives transformed and hope restored"</p>
-                                            </div>
-                                            <!-- Testimonial Content End -->
-                                        </div>
-                                        <!-- Testimonial Item End -->
-                                    </div>
-                                    <!-- Testimonial Slide End -->
-
-                                    <!-- Testimonial Slide Start -->
-                                    <div class="swiper-slide">
-                                        <!-- Testimonial Item Start -->
-                                        <div class="testimonial-item">
-                                            <!-- Testimonial Header Start -->
-                                            <div class="testimonial-header">
-                                                <!-- Author Info Start -->
-                                                <div class="author-info">
-                                                    <!-- Author Image Start -->
-                                                    <div class="author-image">
-                                                        <figure class="image-anime">
-                                                            <img src="images/author-2.jpg" alt="">
-                                                        </figure>
-                                                    </div>    
-                                                    <!-- Author Image End -->
-
-                                                    <!-- Author Content Start -->
-                                                    <div class="author-content">
-                                                        <h3>michael carter</h3>
-                                                        <p>program manager</p>
-                                                    </div>
-                                                    <!-- Author Content End -->
-                                                </div>
-                                                <!-- Author Info Author End -->
-                                                
-                                                <!-- Testimonial Rating Start -->
-                                                <div class="testimonial-rating">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                                <!-- Testimonial Rating End -->
-                                            </div>
-                                            <!-- Testimonial Header End -->
-                                            
-                                            <!-- Testimonial Content Start -->
-                                            <div class="testimonial-content">
-                                                <p>"Working with [NGO Name] has been a truly inspiring experience. Their dedication to uplifting communities and creating sustainable change is unmatched. Through their programs, I've seen lives transformed and hope restored"</p>
-                                            </div>
-                                            <!-- Testimonial Content End -->
-                                        </div>
-                                        <!-- Testimonial Item End -->
-                                    </div>
-                                    <!-- Testimonial Slide End -->
-
-                                    <!-- Testimonial Slide Start -->
-                                    <div class="swiper-slide">
-                                        <!-- Testimonial Item Start -->
-                                        <div class="testimonial-item">
-                                            <!-- Testimonial Header Start -->
-                                            <div class="testimonial-header">
-                                                <!-- Author Info Start -->
-                                                <div class="author-info">
-                                                    <!-- Author Image Start -->
-                                                    <div class="author-image">
-                                                        <figure class="image-anime">
-                                                            <img src="images/author-3.jpg" alt="">
-                                                        </figure>
-                                                    </div>    
-                                                    <!-- Author Image End -->
-
-                                                    <!-- Author Content Start -->
-                                                    <div class="author-content">
-                                                        <h3>sophi martinez</h3>
-                                                        <p>communications director</p>
-                                                    </div>
-                                                    <!-- Author Content End -->
-                                                </div>
-                                                <!-- Author Info Author End -->
-                                                
-                                                <!-- Testimonial Rating Start -->
-                                                <div class="testimonial-rating">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                                <!-- Testimonial Rating End -->
-                                            </div>
-                                            <!-- Testimonial Header End -->
-                                            
-                                            <!-- Testimonial Content Start -->
-                                            <div class="testimonial-content">
-                                                <p>"Working with [NGO Name] has been a truly inspiring experience. Their dedication to uplifting communities and creating sustainable change is unmatched. Through their programs, I've seen lives transformed and hope restored"</p>
-                                            </div>
-                                            <!-- Testimonial Content End -->
-                                        </div>
-                                        <!-- Testimonial Item End -->
-                                    </div>
-                                    <!-- Testimonial Slide End -->
-                                </div>
-                                <div class="testimonial-pagination"></div>
-                            </div>
-                        </div>
-                        <!-- Testimonial Slider End -->
-                    </div>
-                    <!-- Testimonials Content End -->
-                </div>
-            </div>
+        <!-- Features Grid -->
+        <div class="features-grid">
+          <div class="feature-card reveal-on-scroll">
+            <span class="feature-card__number">1</span>
+            <h3 class="feature-card__title">Disability-Led & Disability-Staffed</h3>
+            <p class="feature-card__text">Over 80% of our staff, artisans, and leadership are persons with disabilities. Programs designed by those who understand the community firsthand.</p>
+          </div>
+          
+          <div class="feature-card reveal-on-scroll" style="transition-delay: 50ms;">
+            <span class="feature-card__number">2</span>
+            <h3 class="feature-card__title">70+ Years of Proven Resilience</h3>
+            <p class="feature-card__text">Operated continuously through monarchy, socialism, and modern governance. Preserved and developed our 28,278 sq.m land grant across generations.</p>
+          </div>
+          
+          <div class="feature-card reveal-on-scroll" style="transition-delay: 100ms;">
+            <span class="feature-card__number">3</span>
+            <h3 class="feature-card__title">Integrated Training + Production Model</h3>
+            <p class="feature-card__text">Trainees gain skills while producing sellable goods. Traditional techniques meet modern quality standards.</p>
+          </div>
+          
+          <div class="feature-card reveal-on-scroll" style="transition-delay: 150ms;">
+            <span class="feature-card__number">4</span>
+            <h3 class="feature-card__title">Sustainable Financial Model</h3>
+            <p class="feature-card__text">Diversified revenue streams from product sales, milling services, and strategic partnerships. Self-generated funds support over 70% of operations.</p>
+          </div>
+          
+          <div class="feature-card reveal-on-scroll" style="transition-delay: 200ms;">
+            <span class="feature-card__number">5</span>
+            <h3 class="feature-card__title">Transparent Governance</h3>
+            <p class="feature-card__text">Elected 7-member Executive Committee. Full legal standing with regular audits and transparent reporting.</p>
+          </div>
+          
+          <div class="feature-card reveal-on-scroll" style="transition-delay: 250ms;">
+            <span class="feature-card__number">6</span>
+            <h3 class="feature-card__title">Eco-Conscious Production</h3>
+            <p class="feature-card__text">Locally sourced natural materials, low-waste processes, and non-toxic practices safe for artisans and environment.</p>
+          </div>
+          
+          <div class="feature-card reveal-on-scroll" style="transition-delay: 300ms;">
+            <span class="feature-card__number">7</span>
+            <h3 class="feature-card__title">Advocacy Built Into Operations</h3>
+            <p class="feature-card__text">Active engagement with government on disability rights and community outreach to shift public perception.</p>
+          </div>
+          
+          <div class="feature-card reveal-on-scroll" style="transition-delay: 350ms;">
+            <span class="feature-card__number">8</span>
+            <h3 class="feature-card__title">Customization & Flexibility</h3>
+            <p class="feature-card__text">Tailored training programs, custom product orders, and collaborative partnership models.</p>
+          </div>
+          
+          <div class="feature-card reveal-on-scroll" style="transition-delay: 400ms;">
+            <span class="feature-card__number">9</span>
+            <h3 class="feature-card__title">Future-Focused Development</h3>
+            <p class="feature-card__text">Land development project for modern facilities. Scalable impact and generational sustainability.</p>
+          </div>
         </div>
-    </div>
-    <!-- Our Testimonials Section End -->
 
-    <!-- Our Faqs Section Start -->
-    <div class="our-faqs">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="faqs-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">faq</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Answers to important your questions</h2>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- FAQ Accordion Start -->
-                        <div class="faq-accordion" id="faqaccordion">
-                            <!-- FAQ Item Start -->
-                            <div class="accordion-item wow fadeInUp">
-                                <h2 class="accordion-header" id="heading1">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                        What is the mission of your organization?
-                                    </button>
-                                </h2>
-                                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#faqaccordion">
-                                    <div class="accordion-body">
-                                        <p>You can volunteer, donate, or partner with us to support our initiatives. Visit our Get Involved page for more details.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item End -->
-
-                            <!-- FAQ Item Start -->
-                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                                <h2 class="accordion-header" id="heading2">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                        How can I get involved?
-                                    </button>
-                                </h2>
-                                <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2" data-bs-parent="#faqaccordion">
-                                    <div class="accordion-body">
-                                        <p>You can volunteer, donate, or partner with us to support our initiatives. Visit our Get Involved page for more details.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item End -->
-
-                            <!-- FAQ Item Start -->
-                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                                <h2 class="accordion-header" id="heading3">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                        Where do your donations go?
-                                    </button>
-                                </h2>
-                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqaccordion">
-                                    <div class="accordion-body">
-                                        <p>You can volunteer, donate, or partner with us to support our initiatives. Visit our Get Involved page for more details.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item End -->    
-
-                            <!-- FAQ Item Start -->
-                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                                <h2 class="accordion-header" id="heading4">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                        Are my donations tax-deductible?
-                                    </button>
-                                </h2>
-                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqaccordion">
-                                    <div class="accordion-body">
-                                        <p>You can volunteer, donate, or partner with us to support our initiatives. Visit our Get Involved page for more details.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item End -->
-                            
-                            <!-- FAQ Item Start -->
-                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
-                                <h2 class="accordion-header" id="heading5">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                        How can I volunteer with your organization?
-                                    </button>
-                                </h2>
-                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#faqaccordion">
-                                    <div class="accordion-body">
-                                        <p>You can volunteer, donate, or partner with us to support our initiatives. Visit our Get Involved page for more details.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item End -->
-                        </div>
-                        <!-- FAQ Accordion End -->
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Faqs Image Start -->
-                    <div class="faqs-image">
-                        <div class="faqs-img-1">
-                            <figure class="image-anime reveal">
-                                <img src="images/faqs-image-1.jpg" alt="">
-                            </figure>
-                        </div>
-
-                        <div class="faqs-img-2">
-                            <figure class="image-anime reveal">
-                                <img src="images/faqs-image-2.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <!-- Faqs Image End -->
-                </div>
-            </div>
+        <!-- Features Table -->
+        <div class="features-table-wrapper reveal-on-scroll">
+          <table class="features-table">
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Benefit to Partners & Clients</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Disability-Led</strong></td>
+                <td>Authentic impact, culturally relevant solutions</td>
+              </tr>
+              <tr>
+                <td><strong>Proven Resilience</strong></td>
+                <td>Low-risk partnership, reliable delivery</td>
+              </tr>
+              <tr>
+                <td><strong>Integrated Model</strong></td>
+                <td>Dual impact: social + economic returns</td>
+              </tr>
+              <tr>
+                <td><strong>Financial Sustainability</strong></td>
+                <td>Long-term viability, not project-dependent</td>
+              </tr>
+              <tr>
+                <td><strong>Transparent Governance</strong></td>
+                <td>Trustworthy, accountable, compliant</td>
+              </tr>
+              <tr>
+                <td><strong>Eco-Friendly</strong></td>
+                <td>Environmentally responsible supply chain</td>
+              </tr>
+              <tr>
+                <td><strong>Built-In Advocacy</strong></td>
+                <td>Systemic change alongside direct service</td>
+              </tr>
+              <tr>
+                <td><strong>Customizable</strong></td>
+                <td>Solutions tailored to specific needs</td>
+              </tr>
+              <tr>
+                <td><strong>Future-Oriented</strong></td>
+                <td>Forward-thinking, scalable collaboration</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-    </div>
-    <!-- Our Faqs Section End -->
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WHO BENEFITS SECTION
+         ========================================================================== -->
+    <section class="services-section" aria-labelledby="benefits-heading">
+      <div class="services-container">
+        <div class="reveal-on-scroll">
+          <h2 id="benefits-heading" class="services-section__heading">
+            Who Benefits from Our Services?
+          </h2>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card reveal-on-scroll">
+            <h3 class="benefit-card__title">Individuals with Disabilities</h3>
+            <p class="benefit-card__text">Gaining skills, employment, and confidence</p>
+          </div>
+          <div class="benefit-card reveal-on-scroll" style="transition-delay: 100ms;">
+            <h3 class="benefit-card__title">Local Communities</h3>
+            <p class="benefit-card__text">Accessing quality services and products</p>
+          </div>
+          <div class="benefit-card reveal-on-scroll" style="transition-delay: 200ms;">
+            <h3 class="benefit-card__title">Businesses & Retailers</h3>
+            <p class="benefit-card__text">Sourcing ethically produced goods</p>
+          </div>
+          <div class="benefit-card reveal-on-scroll" style="transition-delay: 300ms;">
+            <h3 class="benefit-card__title">Government & NGOs</h3>
+            <p class="benefit-card__text">Partnering for inclusive development</p>
+          </div>
+          <div class="benefit-card reveal-on-scroll" style="transition-delay: 400ms;">
+            <h3 class="benefit-card__title">International Partners</h3>
+            <p class="benefit-card__text">Investing in sustainable, locally-led impact</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ 
+
+  </main>
+
 
     <!-- Main Footer Section Start -->
     <footer class="main-footer">
@@ -889,5 +800,6 @@
     <script src="js/wow.min.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+    <script src="js/services.js"></script>
 </body>
 </html>

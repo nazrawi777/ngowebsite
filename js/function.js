@@ -1,32 +1,57 @@
 (function ($) {
     "use strict";
+
+    var $window = $(window);
+    var $header = $('header.main-header');
+
+    // Preloader
+    $window.on('load', function () {
+        $(".preloader").fadeOut(600);
+    });
+
+    // Sticky Header on Scroll
+    $window.on('scroll', function () {
+        if ($window.scrollTop() > 10) {
+            $header.addClass('sticky');
+        } else {
+            $header.removeClass('sticky');
+        }
+    });
+
+
+
+    $(document).ready(function () {
+
+        var currentPage = window.location.pathname.split("/").pop();
+
+        // Fix for home page
+        if (currentPage === "" || currentPage === "/") {
+            currentPage = "index.html";
+        }
+
+        $('#menu a.nav-link').each(function () {
+            var linkPage = $(this).attr('href');
+
+            // Ignore empty or #
+            if (!linkPage || linkPage === "#") return;
+
+            if (linkPage === currentPage) {
+                // Activate current link
+                $(this).addClass('active');
+
+                // Activate LI
+                $(this).closest('li').addClass('active');
+
+                // Activate parent submenu if exists
+                $(this).parents('.submenu').addClass('active');
+            }
+        });
+
+    });
+
+
+
 	
-	var $window = $(window); 
-	var $body = $('body'); 
-
-	/* Preloader Effect */
-	$window.on('load', function(){
-		$(".preloader").fadeOut(600);
-	});
-
-	/* Sticky Header */	
-	if($('.active-sticky-header').length){
-		$window.on('resize', function(){
-			setHeaderHeight();
-		});
-
-		function setHeaderHeight(){
-	 		$("header.main-header").css("height", $('header .header-sticky').outerHeight());
-		}	
-	
-		$window.on("scroll", function() {
-			var fromTop = $(window).scrollTop();
-			setHeaderHeight();
-			var headerHeight = $('header .header-sticky').outerHeight()
-			$("header .header-sticky").toggleClass("hide", (fromTop > headerHeight + 100));
-			$("header .header-sticky").toggleClass("active", (fromTop > 600));
-		});
-	}	
 	
 	/* Slick Menu JS */
 	$('#menu').slicknav({

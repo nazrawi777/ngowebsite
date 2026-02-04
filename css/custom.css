@@ -458,20 +458,35 @@ body{
 /************************************/
 /**** 	   03. Header css		 ****/
 /************************************/
+header.main-header {
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
 
-header.main-header{
-	position: absolute;
-	margin: 0 auto;
-	top: 3%;
-	left: 5%;
-	width: 90%;
-	background: rgba(255, 255, 255, 0.1);
-	box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.18);
-	border-radius: 10px;
-	z-index: 100;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+
+    z-index: 100;
+    transition: all 0.3s ease;
 }
+
+/* STICKY STATE */
+header.main-header.sticky {
+    position: fixed;
+    top: 10px;
+    left: 5%;
+    width: 90%;
+    z-index: 999;
+
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+}
+
+
 
 
 
@@ -504,13 +519,40 @@ header.main-header{
 	margin: 0;
 	position: relative;
 }
+.navbar-nav .nav-link {
+    display: inline-block;   
+    padding: 4px 6px;
+}
+/* Active menu item */
+.navbar-nav .nav-link.active {
+    background-color: #ff6b00;
+    color: #fff !important;
+    border-radius: 6px;
+	
+    
+}
+
+/* Parent menu active when submenu page is open */
+.navbar-nav .submenu.active > .nav-link {
+    background-color: #ff6b00;
+    color: #fff !important;
+	    display: inline-block;   
+    padding: 4px 6px;
+    border-radius: 6px;
+}
+
+/* Optional: submenu active item */
+.navbar-nav .submenu ul .nav-link.active {
+    background-color: #ffe2d1;
+    color: #ff6b00 !important;
+}
 
 .main-menu ul li a{
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.4em;
 	padding: 14px 20px !important;
-	color: var(--white-color);
+	color: var(--primary-color);
 	text-transform: capitalize;
 	transition: all 0.3s ease-in-out;
 }

@@ -396,6 +396,234 @@
 			});
 		}
 	}
-	/*Service Entry Step Item Active End  */
+	document.addEventListener('DOMContentLoaded', () => {
+    const progressPath = document.querySelector('.progress-circle path');
+    const pathLength = progressPath.getTotalLength();
+    const scrollBtn = document.querySelector('.progress-wrap');
+
+    // Initialize the circle path
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+    progressPath.style.strokeDasharray = `${pathLength} ${pathLength}`;
+    progressPath.style.strokeDashoffset = pathLength;
+    progressPath.getBoundingClientRect();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+
+    // Function to update the progress ring
+    const updateProgress = () => {
+        const scroll = window.pageYOffset || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = pathLength - (scroll * pathLength / height);
+        
+        progressPath.style.strokeDashoffset = progress;
+
+        // Toggle button visibility
+        if (scroll > 100) {
+            scrollBtn.classList.add('active-progress');
+        } else {
+            scrollBtn.classList.remove('active-progress');
+        }
+    };
+
+    // Smooth scroll to top
+    scrollBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Listen for scroll events
+    window.addEventListener('scroll', updateProgress);
+});
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- CONFIGURATION ---
+    const DEV_MOCK = true; 
+    const API_ENDPOINT = 'https://YOUR_REAL_API_URL_HERE'; 
+    const STORAGE_KEY = 'hulegeb_chat_v2'; 
+    
+    // --- DOM ELEMENTS ---
+    const chatWindow = document.getElementById('chatWindow');
+    const toggleBtn = document.getElementById('chatToggleBtn');
+    const closeBtn = document.getElementById('closeChatBtn');
+    const clearBtn = document.getElementById('clearChatBtn');
+    const chatMessages = document.getElementById('chatMessages');
+    const typingIndicator = document.getElementById('typingIndicator');
+    const chatInput = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    let isBotTyping = false;
+
+    // --- INITIALIZATION ---
+    function initChat() {
+        const history = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+        
+        if (history.length === 0) {
+            const welcomeMsg = {
+                text: "Hello! I am Hulegeb Chatbot. How can I help you today?",
+                sender: 'bot',
+                timestamp: new Date().toISOString()
+            };
+            history.push(welcomeMsg);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+        }
+
+        // Clear and prepare container
+        chatMessages.innerHTML = ''; 
+        
+        // Safety: ensure typingIndicator is in the DOM before rendering history
+        chatMessages.appendChild(typingIndicator);
+        typingIndicator.style.display = 'none';
+
+        // Render history
+        history.forEach(msg => renderMessageToDOM(msg));
+        
+        scrollToBottom();
+    }
+
+    // --- CORE LOGIC ---
+    function handleSend() {
+        const text = chatInput.value.trim();
+        if (!text || isBotTyping) return;
+
+        addMessage(text, 'user');
+        
+        chatInput.value = '';
+        chatInput.style.height = 'auto';
+        sendBtn.disabled = true;
+
+        isBotTyping = true;
+        showTyping(true);
+
+        if (DEV_MOCK) {
+            getMockReply(text);
+        } else {
+            getRealApiReply(text);
+        }
+    }
+
+    function getMockReply(userText) {
+        setTimeout(() => {
+            let replyText = "I am Hulegeb AI. I received your message: " + userText;
+            
+            if (userText.toLowerCase().includes('pi')) {
+                replyText = "Pi is approximately 3.14159.";
+            } else if (userText.toLowerCase().includes('hello')) {
+                replyText = "Hello there! Ask me anything.";
+            }
+
+            addMessage(replyText, 'bot');
+            isBotTyping = false;
+            showTyping(false);
+        }, 1500);
+    }
+
+    async function getRealApiReply(userText) {
+        try {
+            const response = await fetch(API_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: userText })
+            });
+            const data = await response.json();
+            addMessage(data.reply || "No response from server.", 'bot');
+        } catch (error) {
+            addMessage("Error connecting to Hulegeb Server.", 'bot');
+        } finally {
+            isBotTyping = false;
+            showTyping(false);
+        }
+    }
+
+    // --- HELPER FUNCTIONS ---
+    function addMessage(text, sender) {
+        const msg = { text, sender, timestamp: new Date().toISOString() };
+        
+        const history = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+        history.push(msg);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+
+        renderMessageToDOM(msg);
+        scrollToBottom();
+    }
+
+    function renderMessageToDOM(msg) {
+        const div = document.createElement('div');
+        div.className = `message ${msg.sender}-message`;
+        
+        const time = new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+        div.innerHTML = `
+            <div class="message-content">${escapeHtml(msg.text)}</div>
+            <div class="message-meta">${time}</div>
+        `;
+        
+        // --- FIXED LINE BELOW ---
+        // Check if typingIndicator is actually a child of chatMessages
+        if (typingIndicator && chatMessages.contains(typingIndicator)) {
+            chatMessages.insertBefore(div, typingIndicator);
+        } else {
+            chatMessages.appendChild(div);
+        }
+    }
+
+    function showTyping(show) {
+        if (typingIndicator) {
+            typingIndicator.style.display = show ? 'flex' : 'none';
+        }
+        scrollToBottom();
+    }
+
+    function scrollToBottom() {
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    function clearChat() {
+        if (confirm('Clear all conversation history?')) {
+            localStorage.removeItem(STORAGE_KEY);
+            initChat(); 
+        }
+    }
+
+    // --- EVENT LISTENERS ---
+    toggleBtn.addEventListener('click', () => {
+        chatWindow.classList.toggle('active');
+        toggleBtn.classList.toggle('open');
+        if(chatWindow.classList.contains('active')) {
+            setTimeout(() => chatInput.focus(), 300);
+            scrollToBottom();
+        }
+    });
+
+    closeBtn.addEventListener('click', () => {
+        chatWindow.classList.remove('active');
+        toggleBtn.classList.remove('open');
+    });
+
+    if (clearBtn) clearBtn.addEventListener('click', clearChat);
+    sendBtn.addEventListener('click', handleSend);
+
+    chatInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            handleSend();
+        }
+    });
+
+    chatInput.addEventListener('input', () => {
+        chatInput.style.height = 'auto';
+        chatInput.style.height = chatInput.scrollHeight + 'px';
+        sendBtn.disabled = chatInput.value.trim() === '';
+    });
+
+    initChat();
+});
 	
 })(jQuery);

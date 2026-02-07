@@ -625,5 +625,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initChat();
 });
+(function() {
+    const fixLayout = () => {
+        const resetStyles = { margin: '0', padding: '0', width: '100%', maxWidth: '100%', overflowX: 'hidden' };
+        Object.assign(document.documentElement.style, resetStyles);
+        Object.assign(document.body.style, resetStyles);
+
+        // TARGET EVERYTHING EXCEPT THE HEADER
+        // I removed '.main-header' and '.navbar' from this list
+        const fullWidthElements = document.querySelectorAll('.hero, footer, .footer');
+        
+        fullWidthElements.forEach(el => {
+            el.style.width = '100%';
+            el.style.left = '0';
+        });
+    };
+
+    fixLayout();
+    window.addEventListener('resize', fixLayout);
+    setTimeout(fixLayout, 500);
+})();
 	
 })(jQuery);

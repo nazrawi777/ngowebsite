@@ -72,7 +72,7 @@
                                 
                                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                                 <li>
-    <a href="store.html">Our Products</a>
+    <a href="store.html">Products</a>
 </li>
                                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                                 <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
@@ -142,7 +142,7 @@
                                         <div class="hero-body wow fadeInUp" data-wow-delay="0.4s">
                                             <!-- Hero Button Start -->
                                             <div class="hero-btn">
-                                                <a href="shop.html" class="btn-default">Shop Our Products</a>
+                                                <a href="shop.html" class="btn-default">Shop Products</a>
                                                 <a href="partner.html" class="btn-default">Partner With Us</a>
                                                 <a href="about.html" class="btn-default">Learn Our Story</a>
                                             </div>
@@ -209,7 +209,7 @@
                                         <div class="hero-body wow fadeInUp" data-wow-delay="0.4s">
                                             <!-- Hero Button Start -->
                                             <div class="hero-btn">
-                                                <a href="shop.html" class="btn-default">Shop Our Products</a>
+                                                <a href="shop.html" class="btn-default">Shop Products</a>
                                                 <a href="partner.html" class="btn-default">Partner With Us</a>
                                                 <a href="about.html" class="btn-default">Learn Our Story</a>
                                             </div>
@@ -1583,5 +1583,27 @@
     <script src="js/wow.min.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+ <script>
+(function() {
+    const fixLayout = () => {
+        const resetStyles = { margin: '0', padding: '0', width: '100%', maxWidth: '100%', overflowX: 'hidden' };
+        Object.assign(document.documentElement.style, resetStyles);
+        Object.assign(document.body.style, resetStyles);
+
+        // TARGET EVERYTHING EXCEPT THE HEADER
+        // I removed '.main-header' and '.navbar' from this list
+        const fullWidthElements = document.querySelectorAll('.hero, footer, .footer');
+        
+        fullWidthElements.forEach(el => {
+            el.style.width = '100%';
+            el.style.left = '0';
+        });
+    };
+
+    fixLayout();
+    window.addEventListener('resize', fixLayout);
+    setTimeout(fixLayout, 500);
+})();
+</script>
 </body>
 </html>

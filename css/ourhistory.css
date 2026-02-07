@@ -238,7 +238,7 @@ ul, ol {
    
 .hero2 {
     position: relative;
-    overflow: hidden;
+    
     background: linear-gradient(135deg, var(--hulegeb-terracotta) 0%, hsl(25, 55%, 35%) 100%);
     color: var(--primary-foreground);
     padding: 6rem 0;

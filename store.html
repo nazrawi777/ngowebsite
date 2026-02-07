@@ -142,7 +142,7 @@
   <section class="hero" role="banner">
     <div class="hero-bg">
       <img 
-        src="../src/assets/hero-weaving.jpg" 
+        src="assets/hero-weaving.jpg" 
         alt="Ethiopian artisan weaving on traditional loom"
         loading="eager"
       >
@@ -261,7 +261,7 @@
     <div class="cta-content">
       <h2>Custom Orders Welcome</h2>
       <p>Looking for specific dimensions, patterns, or colors? Our artisans can create bespoke pieces tailored to your vision.</p>
-      <a href="product.html?slug=hulegeb-furniture-custom" class="btn btn-primary">Request Custom Order</a>
+      <a href="products.html?slug=hulegeb-furniture-custom" class="btn btn-primary">Request Custom Order</a>
     </div>
   </section>
     <!-- Main Footer Section Start -->
@@ -507,7 +507,7 @@
         const hasComparePrice = product.compare_at_price && product.compare_at_price > product.price;
 
         const card = document.createElement('a');
-        card.href = `product.html?slug=${product.slug}`;
+        card.href = `products.html?slug=${product.slug}`;
         card.className = 'product-card animate-fade-up';
         card.style.animationDelay = `${0.1 * (index % 8)}s`;
 

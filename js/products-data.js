@@ -245,19 +245,19 @@ function getVariantBySlug(product, variantSlug) {
 
 function getProductImage(slug) {
   const imageMap = {
-    'hulegeb-handwoven-carpet': '../src/assets/carpet-front.jpg',
-    'hulegeb-doormat': '../src/assets/doormat-front.jpg',
-    'hulegeb-mop': '../src/assets/mop-white.jpg',
-    'hulegeb-broom': '../src/assets/broom-front.jpg',
-    'hulegeb-glass-wash-brush': '../src/assets/glass-brush-yellow.jpg',
-    'hulegeb-small-brush': '../src/assets/small-brush-red.jpg',
-    'hulegeb-large-brush': '../src/assets/large-brush-red.jpg',
-    'hulegeb-furniture-custom': '../src/assets/furniture-oak.jpg',
-    'hulegeb-bedding-fabric-meter': '../src/assets/fabric-front.jpg',
-    'hulegeb-drapes-1x9m': '../src/assets/drapes-front.jpg',
-    'hulegeb-towel-roll': '../src/assets/towel-front.jpg'
+    'hulegeb-handwoven-carpet': 'assets/carpet-front.jpg',
+    'hulegeb-doormat': 'assets/doormat-front.jpg',
+    'hulegeb-mop': 'assets/mop-white.jpg',
+    'hulegeb-broom': 'assets/broom-front.jpg',
+    'hulegeb-glass-wash-brush': 'assets/glass-brush-yellow.jpg',
+    'hulegeb-small-brush': 'assets/small-brush-red.jpg',
+    'hulegeb-large-brush': 'assets/large-brush-red.jpg',
+    'hulegeb-furniture-custom': 'assets/furniture-oak.jpg',
+    'hulegeb-bedding-fabric-meter': 'assets/fabric-front.jpg',
+    'hulegeb-drapes-1x9m': 'assets/drapes-front.jpg',
+    'hulegeb-towel-roll': 'assets/towel-front.jpg'
   };
-  return imageMap[slug] || '../src/assets/carpet-front.jpg';
+  return imageMap[slug] || 'assets/carpet-front.jpg';
 }
 
 // Export for use in other files

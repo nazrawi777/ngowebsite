@@ -492,12 +492,12 @@ navbar-nav .submenu.active > .nav-link {
    SECTION: Stats
    ============================================ */
 .stats {
-  padding: var(--space-section-mobile) 0;
+  padding: 1rem;
 }
 
 @media (min-width: 768px) {
   .stats {
-    padding: var(--space-section) 0;
+    padding: 1.5rem;
   }
 }
 
@@ -539,6 +539,7 @@ navbar-nav .submenu.active > .nav-link {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.5vw, 2.75rem);
   font-weight: 700;
+  
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -566,7 +567,7 @@ navbar-nav .submenu.active > .nav-link {
 .counter-number {
   font-family: var(--font-display);
   font-weight: 700;
-  height: 40px;
+  height: 50px;
  
 }
 
@@ -579,7 +580,7 @@ navbar-nav .submenu.active > .nav-link {
 
 @media (min-width: 768px) {
   .mission-vision {
-    padding: var(--space-section) 0;
+    padding: 1rem;
   }
 }
 
@@ -638,7 +639,7 @@ navbar-nav .submenu.active > .nav-link {
 
 @media (min-width: 768px) {
   .values {
-    padding: var(--space-section) 0;
+    padding: 1.5rem;
   }
 }
 
@@ -703,7 +704,7 @@ navbar-nav .submenu.active > .nav-link {
 
 @media (min-width: 768px) {
   .objectives {
-    padding: var(--space-section) 0;
+    padding: 1.5rem;
   }
 }
 

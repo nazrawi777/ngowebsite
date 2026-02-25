@@ -23,8 +23,8 @@
     --card-foreground: hsl(25, 25%, 15%);
 
     /* Primary - Rich terracotta/rust */
-    --primary: hsl(18, 65%, 45%);
-    --primary-foreground: hsl(40, 40%, 98%);
+   --primary: hsl(210, 72%, 49%);
+  --primary-foreground: hsl(210, 100%, 98%);
 
     /* Secondary - Warm sand */
     --secondary: hsl(35, 30%, 88%);
@@ -35,24 +35,26 @@
     --muted-foreground: hsl(25, 15%, 45%);
 
     /* Accent - Ethiopian gold */
-    --accent: hsl(42, 75%, 50%);
-    --accent-foreground: hsl(25, 25%, 15%);
+    --accent: hsl(33, 100%, 50%);
+    --accent-foreground: hsl(33, 25%, 10%);
 
-    /* Custom Hulegeb tokens */
-    --hulegeb-terracotta: hsl(18, 65%, 45%);
-    --hulegeb-terracotta-light: hsl(18, 55%, 55%);
-    --hulegeb-cream: hsl(40, 33%, 96%);
-    --hulegeb-sand: hsl(35, 30%, 88%);
-    --hulegeb-gold: hsl(42, 75%, 50%);
-    --hulegeb-gold-muted: hsl(42, 45%, 65%);
-    --hulegeb-earth: hsl(25, 35%, 30%);
-    --hulegeb-olive: hsl(85, 25%, 40%);
+    /* Custom Hulegeb tokens - Re-aligned to new Base Colors */
+    --hulegeb-terracotta: hsl(210, 72%, 49%);        /* The core Blue */
+--hulegeb-terracotta-light: hsl(210, 65%, 60%);
+    --hulegeb-cream: hsl(40, 33%, 96%);             /* Warm background */
+    --hulegeb-sand: hsl(35, 30%, 88%);              /* Section background */
+    
+    /* Gold is now tied directly to your Orange (#ff8e01) */
+    --hulegeb-gold: hsl(33, 100%, 50%);
+    --hulegeb-gold-muted: hsl(33, 45%, 65%);
+    
+    --hulegeb-earth: hsl(25, 35%, 30%);             /* Deep brown for text/footer */
+    --hulegeb-olive: hsl(85, 25%, 40%);             /* Nature accent */
 
-    /* Timeline */
+    /* Timeline - Synchronized with Terracotta and Gold */
     --timeline-line: hsl(35, 25%, 80%);
-    --timeline-dot: hsl(18, 65%, 45%);
-    --timeline-dot-active: hsl(42, 75%, 50%);
-
+    --timeline-dot: var(--hulegeb-terracotta);
+    --timeline-dot-active: var(--hulegeb-gold);
     /* Borders */
     --border: hsl(35, 25%, 85%);
 

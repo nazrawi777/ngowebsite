@@ -542,7 +542,7 @@ header.main-header.sticky {
     background-color: #ff8e01;
     color: #fff !important;
     border-radius: 6px;
-	padding: 4px 6px !important;
+	padding: 6px 8px !important;
 	
     
 }
@@ -593,7 +593,7 @@ header.main-header.sticky {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-	width: 230px;
+	width: 150px;
 	border-radius: 20px;
 	position: absolute;
 	left: 0;
@@ -601,6 +601,13 @@ header.main-header.sticky {
 	background-color: var(--accent-color);
 	transition: all 0.3s ease-in-out;
 	text-align: left;
+}
+    #abthead {
+    background-color: #ff8e01;
+    color: #fff !important;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 5.6px 6.5px !important;
 }
 
 .main-menu ul li.submenu:first-child ul{
@@ -2025,8 +2032,8 @@ header.main-header.sticky {
 }
 
 .donate-value-box{
-	display: flex;
-	flex-wrap: wrap;
+	display:flex;
+	flex-direction: column;
 	gap: 10px;
 	margin-bottom: 30px;
 }
@@ -4844,7 +4851,7 @@ header.main-header.sticky {
 }
 
 .campaign-donate-form .donate-value{
-	width: calc(16.66% - 12.5px);
+	width: calc(46.66% - 12.5px);
 }
 
 .donate-payment-method{

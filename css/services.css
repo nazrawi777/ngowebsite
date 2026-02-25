@@ -64,8 +64,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #2D3B36; /* EDIT: Primary text color - dark forest */
-  background-color: #F5F0E8; /* EDIT: Page background - warm cream */
+  color: #237dd8; /* EDIT: Primary text color - dark forest */
+  background-color: #237dd8; /* EDIT: Page background - warm cream */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -80,7 +80,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   padding: 12px 24px;
-  background: #2D5A47; /* EDIT: Skip link background - deep forest */
+  background: #237dd8; /* EDIT: Skip link background - deep forest */
   color: #FFFFFF;
   font-weight: 600;
   text-decoration: none;
@@ -252,7 +252,7 @@ body {
 
 /* EDIT: Primary button - terracotta */
 .btn--primary {
-  background: linear-gradient(135deg, #C17F59 0%, #A86B48 100%);
+  background: linear-gradient(135deg, #ff8e01 0%, #A86B48 100%);
   color: #FFFFFF;
   box-shadow: 0 4px 12px rgba(193, 127, 89, 0.35), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -293,13 +293,13 @@ body {
 
 /* EDIT: Contact button - forest green */
 .btn--contact {
-  background: linear-gradient(135deg, #2D5A47 0%, #1E4233 100%);
+  background: linear-gradient(135deg, #237dd8 0%, #1E4233 100%);
   color: #FFFFFF;
   box-shadow: 0 4px 12px rgba(45, 90, 71, 0.35);
 }
 
 .btn--contact:hover {
-  background: linear-gradient(135deg, #3A7159 0%, #2D5A47 100%);
+  background: linear-gradient(135deg, #3A7159 0%, #237dd8 100%);
   box-shadow: 0 6px 20px rgba(45, 90, 71, 0.45);
   transform: translateY(-2px);
 }
@@ -310,6 +310,8 @@ body {
 
 .services-section {
   padding: 64px 0;
+  position: relative;
+  top: 40px;
 }
 
 @media (min-width: 640px) {
@@ -328,7 +330,7 @@ body {
 .services-section__heading {
   font-size: 28px;
   font-weight: 700;
-  color: #2D5A47; /* EDIT: Heading color - deep forest */
+  color: #237dd8; /* EDIT: Heading color - deep forest */
   margin: 0 0 16px 0;
   line-height: 1.2;
 }
@@ -398,7 +400,7 @@ body {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #C17F59 0%, #D4A84B 100%);
+  background: linear-gradient(90deg, #ff8e01 0%, #D4A84B 100%);
   opacity: 0;
   transition: opacity 300ms ease;
 }
@@ -420,7 +422,8 @@ body {
   height: 64px;
   margin-bottom: 24px;
   padding: 16px;
-  background: linear-gradient(135deg, #F5F0E8 0%, #EDE6DA 100%);
+  /* Using your Orange #ff8e01 as the base */
+background: linear-gradient(135deg, hsl(33, 100%, 80%) 0%, hsl(33, 100%,65%) 100%);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -430,14 +433,14 @@ body {
 .service-card__icon svg {
   width: 32px;
   height: 32px;
-  color: #C17F59; /* EDIT: Icon color - terracotta */
+  color: #ff8e01; /* EDIT: Icon color - terracotta */
 }
 
 .service-card__number {
   display: inline-block;
   font-size: 14px;
   font-weight: 700;
-  color: #C17F59; /* EDIT: Number badge color */
+  color: #ff8e01; /* EDIT: Number badge color */
   background: rgba(193, 127, 89, 0.12);
   padding: 4px 12px;
   border-radius: 20px;
@@ -447,7 +450,7 @@ body {
 .service-card__title {
   font-size: 22px;
   font-weight: 700;
-  color: #2D5A47; /* EDIT: Card title color */
+  color: #237dd8; /* EDIT: Card title color */
   margin: 0 0 12px 0;
   line-height: 1.3;
 }
@@ -486,7 +489,7 @@ body {
   font-family: inherit;
   font-size: 16px;
   font-weight: 600;
-  color: #2D5A47;
+  color: #237dd8;
   cursor: pointer;
   text-align: left;
   transition: background 200ms ease;
@@ -551,12 +554,12 @@ body {
   top: 8px;
   width: 8px;
   height: 8px;
-  background: linear-gradient(135deg, #C17F59 0%, #D4A84B 100%);
+  background: linear-gradient(135deg, #ff8e01 0%, #D4A84B 100%);
   border-radius: 50%;
 }
 
 .services-list__item strong {
-  color: #2D5A47;
+  color: #237dd8;
   font-weight: 600;
 }
 
@@ -586,7 +589,7 @@ body {
 }
 
 .features-table th {
-  background: linear-gradient(135deg, #2D5A47 0%, #3A7159 100%);
+  background: linear-gradient(135deg, #237dd8 0%, #3A7159 100%);
   color: #FFFFFF;
   font-weight: 600;
   font-size: 15px;
@@ -635,7 +638,7 @@ body {
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #2D5A47 0%, #3A7159 100%);
+  background: linear-gradient(135deg, #237dd8 0%, #3A7159 100%);
   border-radius: 16px;
   padding: 32px 24px;
   text-align: center;
@@ -691,7 +694,7 @@ body {
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 2px 12px rgba(45, 90, 71, 0.06);
-  border-left: 4px solid #C17F59;
+  border-left: 4px solid #ff8e01;
   transition: all 200ms ease;
 }
 
@@ -703,7 +706,7 @@ body {
 .benefit-card__title {
   font-size: 17px;
   font-weight: 600;
-  color: #2D5A47;
+  color: #237dd8;
   margin: 0 0 8px 0;
 }
 
@@ -719,7 +722,7 @@ body {
    ========================================================================== */
 
 .contact-section {
-  background: linear-gradient(135deg, #2D5A47 0%, #1E4233 100%);
+  background: linear-gradient(135deg, #237dd8 0%, #1E4233 100%);
   padding: 80px 0;
   text-align: center;
 }
@@ -778,7 +781,7 @@ body {
 .contact-form__title {
   font-size: 24px;
   font-weight: 700;
-  color: #2D5A47;
+  color: #237dd8;
   margin: 0 0 24px 0;
   text-align: center;
 }
@@ -791,7 +794,7 @@ body {
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: #2D5A47;
+  color: #237dd8;
   margin-bottom: 8px;
 }
 
@@ -811,7 +814,7 @@ body {
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #C17F59;
+  border-color: #ff8e01;
   background: #FFFFFF;
   box-shadow: 0 0 0 4px rgba(193, 127, 89, 0.15);
 }
@@ -856,7 +859,7 @@ body {
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #C17F59 0%, #A86B48 100%);
+  background: linear-gradient(135deg, #ff8e01 0%, #A86B48 100%);
   border: none;
   border-radius: 50%;
   box-shadow: 0 6px 20px rgba(193, 127, 89, 0.4);
@@ -968,7 +971,7 @@ body {
   left: 24px;
   right: 24px;
   height: 3px;
-  background: linear-gradient(90deg, #C17F59 0%, #D4A84B 100%);
+  background: linear-gradient(90deg, #ff8e01 0%, #D4A84B 100%);
   border-radius: 3px 3px 0 0;
   opacity: 0;
   transition: opacity 300ms ease;
@@ -989,7 +992,7 @@ body {
   justify-content: center;
   width: 36px;
   height: 36px;
-  background: linear-gradient(135deg, #2D5A47 0%, #3A7159 100%);
+  background: linear-gradient(135deg, #237dd8 0%, #3A7159 100%);
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 700;
@@ -1000,7 +1003,7 @@ body {
 .feature-card__title {
   font-size: 18px;
   font-weight: 700;
-  color: #2D5A47;
+  color: #237dd8;
   margin: 0 0 12px 0;
   line-height: 1.3;
 }

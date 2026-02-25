@@ -4875,7 +4875,10 @@ header.main-header.sticky {
 	display: flex;
 	align-items: center;
 }
-
+.donate-value label span {
+    display: inline-block;
+    margin-left: 20px; /* Adjust this value as needed */
+}
 .donate-payment-type .payment-method input{
 	height: 24px;
 	width: 24px;

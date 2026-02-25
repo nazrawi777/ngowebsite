@@ -8,16 +8,16 @@
   --color-card-foreground: hsl(200, 25%, 15%);
   
   /* Primary: Warm Amber/Gold - Hope, Warmth, Empowerment */
-  --color-primary: hsl(35, 90%, 52%);
-  --color-primary-foreground: hsl(40, 33%, 98%);
-  --color-primary-light: hsl(38, 95%, 65%);
-  --color-primary-dark: hsl(30, 85%, 42%);
+  --color-primary: hsl(210, 72%, 49%);
+  --color-primary-foreground: hsl(210, 100%, 98%);
+  --color-primary-light: hsl(210, 72%, 65%);
+  --color-primary-dark: hsl(210, 72%, 35%);
   
   /* Secondary: Deep Teal - Trust, Stability, Growth */
-  --color-secondary: hsl(175, 45%, 32%);
-  --color-secondary-foreground: hsl(40, 33%, 98%);
-  --color-secondary-light: hsl(175, 40%, 45%);
-  --color-secondary-dark: hsl(175, 50%, 22%);
+ --color-secondary: hsl(33, 100%, 50%);
+  --color-secondary-foreground: hsl(33, 100%, 98%);
+  --color-secondary-light: hsl(33, 100%, 65%);
+  --color-secondary-dark: hsl(33, 100%, 35%);
   
   /* Muted tones */
   --color-muted: hsl(40, 20%, 92%);
@@ -328,11 +328,18 @@ a:hover {
    ============================================ */
 .hero1 {
   position: relative;
-  min-height: 90vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+navbar-nav .submenu.active > .nav-link {
+    background-color: #ff8e01;
+    color: #fff !important;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 4px 6px !important;
 }
 
 .hero1__background {
@@ -536,6 +543,9 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+   position: relative;
+  z-index: 50;;
+  bottom: 20px !important;
 
 }
 
@@ -557,7 +567,7 @@ a:hover {
   font-family: var(--font-display);
   font-weight: 700;
   height: 40px;
-  position: relative;
+ 
 }
 
 /* ============================================

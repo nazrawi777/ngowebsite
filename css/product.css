@@ -58,6 +58,7 @@
 .product-layout {
   display: grid;
   gap: 3rem;
+  margin-top: 100px;
 }
 
 @media (min-width: 1024px) {

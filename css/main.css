@@ -62,7 +62,7 @@ p {
 }
 
 a {
-  color: #8b5a2b;
+  color: #237dd8;
   text-decoration: none;
   transition: color 150ms ease;
 }
@@ -120,12 +120,12 @@ img {
 }
 
 .btn:focus {
-  outline: 2px solid #8b5a2b;
+  outline: 2px solid #237dd8;
   outline-offset: 2px;
 }
 
 .btn-primary {
-  background-color: #8b5a2b;
+  background-color: #237dd8;
   color: #faf8f5;
 }
 
@@ -345,6 +345,7 @@ img {
   background-color: rgba(245, 240, 232, 0.3);
   border-bottom: 1px solid #e0d5c5;
   padding: 4rem 1rem;
+  margin-top: 100px;
 }
 
 @media (min-width: 640px) {
@@ -403,19 +404,19 @@ img {
   width: 3rem;
   height: 3rem;
   margin: 0 auto 1rem;
-  background-color: rgba(139, 90, 43, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #8b5a2b;
+  background-color: hsla(210, 72%, 49%, 0.1);
+  color: hsl(210, 72%, 49%);
 }
 
 .impact-value {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #8b5a2b;
+  color: hsl(210, 72%, 49%);
   margin-bottom: 0.25rem;
 }
 
@@ -427,20 +428,20 @@ img {
 
 .impact-label {
   font-size: 0.875rem;
-  color: #6b6b6b;
+  color: hsl(33, 20%, 45%);
 }
 
 .impact-progress {
   margin-top: 0.5rem;
   height: 0.25rem;
-  background-color: #e8e0d5;
+  background-color: hsl(33, 40%, 96%);
   border-radius: 9999px;
   overflow: hidden;
 }
 
 .impact-progress-bar {
   height: 100%;
-  background: linear-gradient(to right, #8b5a2b, #d4a574);
+  background: linear-gradient(to right, #237dd8, #d4a574);
   border-radius: 9999px;
   width: 0;
   transition: width 1s ease;
@@ -551,7 +552,7 @@ img {
   top: 0.5rem;
   left: 0.5rem;
   padding: 0.25rem 0.5rem;
-  background-color: #8b5a2b;
+  background-color: #237dd8;
   color: #faf8f5;
   font-size: 0.75rem;
   font-weight: 500;
@@ -604,8 +605,8 @@ img {
 }
 
 .product-swatch.active {
-  border-color: #8b5a2b;
-  box-shadow: 0 0 0 2px #faf8f5, 0 0 0 4px #8b5a2b;
+  border-color: #237dd8;
+  box-shadow: 0 0 0 2px #faf8f5, 0 0 0 4px #237dd8;
 }
 
 .product-price {
@@ -618,7 +619,7 @@ img {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #8b5a2b;
+  color: #237dd8;
 }
 
 .product-price .compare {
@@ -797,7 +798,7 @@ img {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #8b5a2b;
+  color: #237dd8;
 }
 
 .artisan-stat-label {
@@ -847,7 +848,7 @@ img {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #8b5a2b;
+  color: #237dd8;
 }
 
 .donation-slider {
@@ -866,7 +867,7 @@ img {
   appearance: none;
   width: 1.25rem;
   height: 1.25rem;
-  background: #8b5a2b;
+  background: #237dd8;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 150ms ease;
@@ -879,7 +880,7 @@ img {
 .donation-slider::-moz-range-thumb {
   width: 1.25rem;
   height: 1.25rem;
-  background: #8b5a2b;
+  background: #237dd8;
   border-radius: 50%;
   cursor: pointer;
   border: none;
@@ -924,16 +925,16 @@ img {
 
 /* Focus Styles */
 :focus-visible {
-  outline: 2px solid #8b5a2b;
+  outline: 2px solid #237dd8;
   outline-offset: 2px;
 }
 
 /* Skip Link */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: 40px;
   left: 0;
-  background: #8b5a2b;
+  background: #237dd8;
   color: #faf8f5;
   padding: 8px;
   z-index: 100;

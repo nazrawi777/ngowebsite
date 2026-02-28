@@ -298,10 +298,10 @@ body{
 	font-family: 'Font Awesome 6 Free';
 	font-size: 14px;
 	line-height: normal;
-	color: var(--accent-color);
+	color: #ff8e01 ;
 	width: 30px;
 	height: 30px;
-	background-color: #ff8e01;
+	background-color: #fff;
 	background-position: center center;
 	border-radius: 50%;
 	display: flex;
@@ -321,7 +321,7 @@ body{
 }
 
 .cb-cursor:before{
-	background: var(--accent-color);
+	background: #ff8e01;
 }
 
 .preloader{
@@ -582,7 +582,7 @@ header.main-header.sticky {
 
 .main-menu ul li a:hover,
 .main-menu ul li a:focus{
-	color: #237dd8;
+	color: #ff8e01;
 }
 
 .main-menu ul ul{
@@ -680,7 +680,7 @@ header.main-header.sticky {
 	left: 50%;
 	bottom: 0;
 	transform: translateX(-50%);
-	background-color: var(--accent-color);
+	background-color: #ff8e01;
 	border-radius: 50%;
 	width: 22px;
 	height: 22px;
@@ -1630,15 +1630,18 @@ header.main-header.sticky {
 	gap: 30px 20px;
 }
 
-.why-choose-list ul li{
-	width: calc(50% - 10px);
-	background: url('../images/icon-check-dark.svg') no-repeat;
+.why-choose-list ul li {
+    width: calc(50% - 10px);
+    background: url('../images/icon-check-dark.svg') no-repeat;
     background-position: left center;
     background-size: 26px auto;
-	color: var(--primary-color);
-	text-transform: capitalize;
-	line-height: 1.5em;
-	padding-left: 35px;
+    padding-left: 35px;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    
+    /* This filter converts black to #237dd8 */
+    filter: invert(42%) sepia(85%) saturate(1039%) hue-rotate(182deg) brightness(89%) contrast(92%);
 }
 
 .why-choose-counters{
@@ -1914,7 +1917,7 @@ header.main-header.sticky {
 	left: 50%;
 	bottom: 0px;
 	transform: translateX(-50%);
-	background-color: var(--accent-color);
+	background-color: #ff8e01;
 	border-radius: 50%;
 	width: 43px;
 	height: 43px;
@@ -2166,7 +2169,7 @@ header.main-header.sticky {
 	left: 50%;
 	bottom: 0px;
 	transform: translateX(-50%);
-	background-color: var(--accent-color);
+	background-color: #ff8e01;
 	border-radius: 50%;
 	width: 34px;
 	height: 34px;
@@ -2535,7 +2538,7 @@ header.main-header.sticky {
 } 
 
 .post-item-meta ul li{
-	color: var(--accent-color);
+	color: #ff8e01;
 	text-transform: capitalize;
 }
 
@@ -2675,7 +2678,7 @@ header.main-header.sticky {
 	width: 36px;
 	height: 36px;
 	color: var(--white-color);
-	background: var(--accent-color);
+	background: #ff8e01;
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -2727,7 +2730,7 @@ header.main-header.sticky {
 }
 
 .newsletter-form .form-group .newsletter-btn{
-	background-color: var(--accent-color);
+	background-color: #ff8e01;
 	width: 56px;
 	height: 56px;
 	border: none;
@@ -7073,14 +7076,14 @@ body {
 
 /* The Progress Path */
 .progress-wrap .progress-circle path {
-    stroke: #007AFF;
+    stroke: #ff8e01;
     stroke-dasharray: 307.919, 307.919;
     stroke-dashoffset: 307.919; /* Initially hidden */
 }
 
 .arrow-icon {
     position: absolute;
-    color: #007AFF;
+    color: #ff8e01;
     display: flex;
     transition: transform 0.3s ease;
 }
@@ -7138,9 +7141,9 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: var(--accent-color);
     border: none;
-    color: #ffffff;
+    color: #ff8e01;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     z-index: 9999;

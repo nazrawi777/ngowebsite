@@ -216,7 +216,7 @@ body{
 .btn-default{
 	position: relative;
     display: inline-block;
-    background: var(--accent-color);
+    background: #ff8e01;
     color: var(--white-color);
 	font-family: var(--accent-font);
     font-size: 16px;
@@ -265,7 +265,7 @@ body{
 	right: 0;
     width: 0;
     height: 100%;
-    background: var(--primary-color);
+    background: var(--accent-color);
 	border-radius: 100px;
     transition: all 0.4s ease-in-out;
     z-index: -1;
@@ -298,10 +298,10 @@ body{
 	font-family: 'Font Awesome 6 Free';
 	font-size: 14px;
 	line-height: normal;
-	color: var(--white-color);
+	color: var(--accent-color);
 	width: 30px;
 	height: 30px;
-	background-color: var(--accent-color);
+	background-color: #ff8e01;
 	background-position: center center;
 	border-radius: 50%;
 	display: flex;
@@ -540,7 +540,7 @@ header.main-header.sticky {
 /* Active menu item */
 .navbar-nav .nav-link.active {
     background-color: #ff8e01;
-    color: #fff !important;
+    color: #237dd8 !important;
     border-radius: 6px;
 	padding: 6px 8px !important;
 	
@@ -559,7 +559,7 @@ header.main-header.sticky {
 /* Optional: submenu active item */
 .navbar-nav .submenu ul .nav-link.active {
     background-color: #ffe2d1;
-    color: #ff8e01 !important;
+    color: #237dd8 !important;
 }
 
 .main-menu ul li a{
@@ -567,7 +567,7 @@ header.main-header.sticky {
 	font-weight: 500;
 	line-height: 1.4em;
 	padding: 14px 20px !important;
-	color: var(--primary-color);
+	color: #237dd8;
 	text-transform: capitalize;
 	transition: all 0.3s ease-in-out;
 }
@@ -582,7 +582,7 @@ header.main-header.sticky {
 
 .main-menu ul li a:hover,
 .main-menu ul li a:focus{
-	color: var(--accent-color);
+	color: #237dd8;
 }
 
 .main-menu ul ul{
@@ -668,7 +668,7 @@ header.main-header.sticky {
 
 .contact-now-box .icon-box{
 	position: relative;
-	color:#237dd8;
+	color:#ff8e01;
 	display: inline-block;
 	margin-right: 15px;
 	padding-bottom: 5px;
@@ -699,14 +699,14 @@ header.main-header.sticky {
 }
 
 .contact-now-box-content p{
-	color: #237dd8;
+	color: #ff8e01;
 	font-size: 16px;
 	text-transform: capitalize;
 	margin-bottom: 5px;
 }
 
 .contact-now-box-content h3{
-	color: var(--accent-color);
+	color: #ff8e01;
 	font-size: 20px;
 }
 
@@ -1108,7 +1108,7 @@ header.main-header.sticky {
 	right: 0;
 	bottom: 15px;
 	max-width: 165px;
-	background-color: var(--accent-color);
+	background-color: #ff8e01;
 	border-radius: 13px;
 	padding: 18px;
     text-align: center;
@@ -1124,7 +1124,7 @@ header.main-header.sticky {
     left: 0;
     width: 100%;
     height: 0;
-    background: var(--primary-color);
+    background: var(--accent-color);
     transition: all 0.4s ease-in-out;
     z-index: 0;
 }
@@ -1181,7 +1181,7 @@ header.main-header.sticky {
 	left: 50%;
 	bottom: 0px;
 	transform: translateX(-50%);
-	background-color: var(--accent-color);
+	background-color: #ff8e01;
 	border-radius: 50%;
 	width: 30px;
 	height: 30px;
@@ -1402,7 +1402,7 @@ header.main-header.sticky {
 	left: 50%;
 	bottom: 0px;
 	transform: translateX(-50%);
-	background-color: var(--accent-color);
+	background-color: #ff8e01;
 	border-radius: 50%;
 	width: 42px;
 	height: 42px;
@@ -1478,6 +1478,10 @@ header.main-header.sticky {
     writing-mode: vertical-rl;	
 	transform: rotate(-180deg);
 }
+.donate-now-box:hover{
+	color: #ff8e01;
+	background-color: #ff8e01;
+}
 
 .donate-now-box a{
 	display: flex;
@@ -1485,7 +1489,7 @@ header.main-header.sticky {
 	gap: 15px;
 	background-color: var(--accent-color);
 	border-radius: 10px;
-	color: var(--white-color);
+	color: #ff8e01;
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: capitalize;
@@ -1494,7 +1498,7 @@ header.main-header.sticky {
 }
 
 .donate-now-box a:hover{
-	background: var(--primary-color);
+	background: var(--accent-color);
 }
 
 .donate-now-box a img{

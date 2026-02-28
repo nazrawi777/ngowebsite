@@ -4,36 +4,15 @@
  */
 
 const PRODUCTS = [
+
   {
-    slug: "hulegeb-handwoven-carpet",
-    title: "Hulegeb Hand-Woven Carpet",
-    brand: "Hulegeb",
-    sku: "HLG-CARP-001",
-    price: 3500,
-    compare_at_price: 4200,
-    currency: "ETB",
-    short_description: "100% natural sheep wool hand-woven carpet. Timeless geometric accents in undyed white and brown with black highlights.",
-    description: "<p>Crafted by blind and physically disabled artisans on traditional looms using 100% natural sheep wool and cotton thread. Available in signature sizes and custom orders.</p><ul><li>Materials: 100% sheep wool + cotton thread</li><li>Sizes: 1.5m×2m, 2m×3m, 1m×2m</li><li>Care: spot clean, dry clean recommended</li></ul>",
-    inventory: 40,
-    default_variant: "size_1-5x2",
-    variants: [
-      { slug: "size_1-5x2", name: "1.5m × 2m", price: 3500, inventory: 15, hex: null, images: ["front", "45", "back"] },
-      { slug: "size_2x3", name: "2m × 3m", price: 6500, inventory: 12, hex: null, images: ["front", "45", "back"] },
-      { slug: "size_1x2", name: "1m × 2m", price: 2800, inventory: 13, hex: null, images: ["front", "45", "back"] }
-    ],
-    sizes: ["1.5x2", "2x3", "1x2"],
-    attributes: { material: "100% sheep wool", origin: "Hand-woven, Ethiopia" },
-    image: "carpet-front.jpg"
-  },
-  {
-    slug: "hulegeb-doormat",
-    title: "Hulegeb Hand-Woven Doormat",
-    brand: "Hulegeb",
+    slug: "Crimson-Track Brush",
+    title: "Crimson-Track Brush",
+    brand: "Crimson-Track Brush",
     sku: "HLG-DOOR-001",
     price: 650,
     currency: "ETB",
-    short_description: "Durable doormat in earthy tones with bold black geometric patterns. Best for covered or indoor entrances.",
-    description: "<p>Handcrafted from natural sheep hair and cotton thread. Excellent dirt-trapping capability and long-lasting construction.</p><ul><li>Sizes: small, medium, large</li><li>Care: shake out, spot clean</li></ul>",
+    description: "<p>Fabric Type	Hand woven Cotton Fabric.</p><ul><li>Base Material	Natural Light Wood / Beech-wood</li><li>Bristles color	Vibrant Red / Crimson</li><li>Design 	Strip brush format, Compact profile, Linear geometry</li><li>Best Use	Specialized cleaning, </li><li>Style	Polished wood surface, Synthetic bristles</li><li>Dimension	(5×7×115 cm)</li></ul>",
     inventory: 200,
     default_variant: "small",
     variants: [
@@ -43,17 +22,20 @@ const PRODUCTS = [
     ],
     sizes: ["small", "medium", "large"],
     attributes: { material: "sheep hair + cotton", function: "entryway scraping" },
-    image: "doormat-front.jpg"
+    images: [
+      "https://i.postimg.cc/WzKT9nPp/image.png",
+     
+    
+    ],
   },
   {
-    slug: "hulegeb-mop",
-    title: "Hulegeb Artisan Mop",
-    brand: "Hulegeb",
+    slug: "Artisan-Block Brush",
+    title: "Artisan-Block Brush",
+    brand: "Artisan-Block Brush",
     sku: "HLG-MOP-001",
     price: 450,
     currency: "ETB",
-    short_description: "Durable cleaning mop with 1.3m wooden handle and absorbent braided or fringed head.",
-    description: "<p>Available types: Braided White Mop, Braided Black Mop, Fringed Black Mop. Handle 1.3m, head width 27cm. Suitable for daily cleaning.</p>",
+    description: "<p>Design	Hand woven Cotton Fabric</p><ul><li>	Base Material	Natural Light Wood / Beech-wood</li><li>Bristles color	Dense Red</li><li>Design 	Handheld block design, Natural wood finish</li><li>Best Use	Heavy-duty scrubbing</li><li>Style	Polished wood surface, Synthetic bristles</li><li>Dimension	7×8.5×23 cm</li></ul>",
     inventory: 150,
     default_variant: "braided-white",
     variants: [
@@ -62,34 +44,34 @@ const PRODUCTS = [
       { slug: "fringed-black", name: "Fringed Black Mop", price: 500, inventory: 40, hex: "#111111", images: ["front", "45"] }
     ],
     attributes: { handle_length_m: 1.3, head_width_cm: 27, material: "wood + cotton thread" },
-    image: "mop-white.jpg"
+    image: "https://i.postimg.cc/XqNk2fkt/image.png"
   },
   {
-    slug: "hulegeb-broom",
-    title: "Hulegeb Heavy-Duty Broom",
-    brand: "Hulegeb",
+    slug: "Bottle Brush",
+    title: "Bottle Brush",
+    brand: "Bottle Brush",
     sku: "HLG-BRMW-001",
     price: 700,
     currency: "ETB",
     short_description: "Extra-long handle broom made from natural fiber and libeng material for large-area cleaning.",
-    description: "<p>Designed for compounds, agricultural areas, and facility maintenance. Handle length 1.3m, durable broom head.</p>",
+    description: "<p>Design	Hand woven Cotton Fabric</p><ul><li>Handle	Metallic Silver</li><li>Bristles color	Bright Yellow</li><li>Design 	Flexible tube design, Chain handle, Cylindrical bristle profile</li><li>Style	Flexible tube, Chain handle, Twisted wire core</li></ul>",
     inventory: 120,
     default_variant: "standard",
     variants: [
       { slug: "standard", name: "Standard Broom", price: 700, inventory: 120, hex: "#8B6B4A", images: ["front", "45"] }
     ],
     attributes: { handle_length_m: 1.3, material: "fiber + libeng" },
-    image: "broom-front.jpg"
+    image: "https://i.postimg.cc/MpztX8BX/image.png"
   },
   {
-    slug: "hulegeb-glass-wash-brush",
-    title: "Hulegeb Glass Washing Brush",
+    slug: "Green-Globe Brush",
+    title: "Green-Globe Brush",
     brand: "Hulegeb",
     sku: "HLG-GBR-001",
     price: 220,
     currency: "ETB",
     short_description: "50cm total length glass washing brush with textured 16cm head; available in yellow, green, red.",
-    description: "<p>Durable twisted metal handle and textured head for streak-free glass cleaning. Available in vibrant yellow, green, and red.</p>",
+    description: "<p>Material	Synthetic bristles, Twisted wire core, Heavy-duty link</p><ul><li>Handle	Metallic Silver (Steel chain)</li><li>Bristles color	Vibrant Green</li><li>Design 	Spherical brush head, Chain-link handle, Slender profile</li><li>Best Use	Bottle and flask cleaning</li><li>Best Use	Bottle and flask cleaning</li><li>Style	Flexible tube, Chain handle, Twisted wire core</li></ul>",
     inventory: 300,
     default_variant: "yellow",
     variants: [
@@ -98,7 +80,7 @@ const PRODUCTS = [
       { slug: "red", name: "Red", price: 220, inventory: 100, hex: "#E53935", images: ["front", "45"] }
     ],
     attributes: { length_cm: 50, brush_head_cm: 16, handle: "twisted metal wire" },
-    image: "glass-brush-yellow.jpg"
+    image: "https://i.postimg.cc/3NgV5FM5/image.png"(we will continue)
   },
   {
     slug: "hulegeb-small-brush",
@@ -244,22 +226,17 @@ function getVariantBySlug(product, variantSlug) {
 }
 
 function getProductImage(slug) {
-  const imageMap = {
-    'hulegeb-handwoven-carpet': 'assets/carpet-front.jpg',
-    'hulegeb-doormat': 'assets/doormat-front.jpg',
-    'hulegeb-mop': 'assets/mop-white.jpg',
-    'hulegeb-broom': 'assets/broom-front.jpg',
-    'hulegeb-glass-wash-brush': 'assets/glass-brush-yellow.jpg',
-    'hulegeb-small-brush': 'assets/small-brush-red.jpg',
-    'hulegeb-large-brush': 'assets/large-brush-red.jpg',
-    'hulegeb-furniture-custom': 'assets/furniture-oak.jpg',
-    'hulegeb-bedding-fabric-meter': 'assets/fabric-front.jpg',
-    'hulegeb-drapes-1x9m': 'assets/drapes-front.jpg',
-    'hulegeb-towel-roll': 'assets/towel-front.jpg'
-  };
-  return imageMap[slug] || 'assets/carpet-front.jpg';
-}
+  const product = PRODUCTS.find(p => p.slug === slug);
+  if (!product) return "";
 
+  // 1. If 'image' exists (the single string), use it.
+  if (product.image) return product.image;
+
+  // 2. If 'images' exists (the list), use the first one in the list.
+  if (product.images && product.images.length > 0) return product.images[0];
+
+  return ""; 
+}
 // Export for use in other files
 window.PRODUCTS = PRODUCTS;
 window.IMPACT_DATA = IMPACT_DATA;

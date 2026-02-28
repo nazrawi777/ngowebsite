@@ -638,7 +638,7 @@ background: linear-gradient(135deg, hsl(33, 100%, 80%) 0%, hsl(33, 100%,65%) 100
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #237dd8 0%, #3A7159 100%);
+  background: linear-gradient(135deg, #237dd8 0%, #d8e9e1 100%);
   border-radius: 16px;
   padding: 32px 24px;
   text-align: center;
@@ -648,7 +648,7 @@ background: linear-gradient(135deg, hsl(33, 100%, 80%) 0%, hsl(33, 100%,65%) 100
 .stat-card__number {
   font-size: 40px;
   font-weight: 800;
-  color: #D4A84B; /* EDIT: Stat number color - golden */
+  color: hsl(210, 72%, 49%); /* EDIT: Stat number color - golden */
   line-height: 1;
   margin-bottom: 8px;
 }

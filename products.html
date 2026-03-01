@@ -173,14 +173,14 @@
         </div>
 
         <!-- Price -->
-        <div class="price-display">
+        <div class="price-display" style="display: none;">
           <span class="price-current" id="product-price">---</span>
           <span class="price-compare" id="product-compare-price" style="display: none;">---</span>
           <span class="price-badge" id="product-discount-badge" style="display: none;">Save</span>
         </div>
 
         <!-- Short Description -->
-        <p class="product-short-desc" id="product-short-desc">Loading product details...</p>
+        <p class="product-short-desc" id="product-short-desc" style="display: none;">Loading product details...</p>
 
         <!-- Variant Swatches -->
         <div class="variants-section">
@@ -193,7 +193,7 @@
         </div>
 
         <!-- Quantity -->
-        <div class="quantity-section">
+        <div class="quantity-section" style="display: none;">
           <label class="quantity-label">Quantity</label>
           <div class="quantity-selector">
             <button class="quantity-btn qty-minus" aria-label="Decrease quantity">−</button>
@@ -205,7 +205,7 @@
 
         <!-- CTA Buttons -->
         <div class="cta-buttons">
-          <button class="btn-add-cart" id="add-to-cart-btn">
+          <button class="btn-add-cart" id="add-to-cart-btn" style="display: none;">
             Add to Cart
           </button>
           <button class="btn-wishlist" aria-label="Add to wishlist">
@@ -242,7 +242,7 @@
         </div>
 
         <!-- Donation Widget -->
-        <div class="donation-widget">
+        <div class="donation-widget" style="display: none;">
           <div class="donation-header">
             <h4>Add a Training Fund Donation</h4>
             <span class="donation-amount">0 ETB</span>
@@ -322,7 +322,7 @@
                             <div class="footer-contact-detail">
                                 <div class="footer-contact-item">
                                     <p>Toll free customer care</p>
-                                    <h3><a href="tel:+123456789">+123 456 789</a></h3>
+                                    <h3><a href="tel:+251-11-3-72-66-47">+251-11-3-72-66-47</a></h3>
                                 </div>
                                 
                                 <div class="footer-contact-item">
@@ -582,7 +582,7 @@
     document.getElementById('product-brand').textContent = product.brand;
     document.getElementById('product-title').textContent = product.title;
     document.getElementById('product-sku').textContent = `SKU: ${product.sku}`;
-    document.getElementById('product-short-desc').textContent = product.short_description;
+
     document.getElementById('full-description').innerHTML = product.description;
 
     const mainImage = document.getElementById('main-image');

@@ -68,7 +68,7 @@ a {
 }
 
 a:hover {
-  color: #d4a574;
+  color: #ff8e01;
 }
 
 img {
@@ -409,7 +409,7 @@ img {
   align-items: center;
   justify-content: center;
   background-color: hsla(210, 72%, 49%, 0.1);
-  color: hsl(210, 72%, 49%);
+  color: #ff8e01;
 }
 
 .impact-value {

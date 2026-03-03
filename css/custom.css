@@ -7460,3 +7460,80 @@ body {
     .chat-header { padding-top: env(safe-area-inset-top, 16px); }
     .chat-input-area { padding-bottom: max(16px, env(safe-area-inset-bottom, 16px)); }
 }
+
+
+
+
+/* 1. THE CHAT WINDOW (MODIFIED) */
+  #dante-pop-wrapper {
+    display: none; /* Hidden by default */
+    position: fixed !important;
+    bottom: 95px !important; /* Sits slightly higher for cleaner look */
+    left: 20px !important;   
+    right: auto !important;
+    width: 400px;
+    height: 500px;
+    z-index: 999999 !important;
+    border-radius: 20px; /* Smoother corners */
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+
+  /* Mobile Fix: No Full-Screen Trap */
+  @media screen and (max-width: 768px) {
+    #dante-pop-wrapper {
+      width: 90vw !important;
+      height: 65vh !important; 
+      left: 5vw !important;
+      bottom: 90px !important;
+    }
+  }
+
+  /* 2. THE CUSTOM LOGO TRIGGER (UPDATED) */
+  #dante-custom-trigger {
+    position: fixed;
+    bottom: 30px;
+    left: 40px;
+    width: 60px; /* Slightly larger for the logo */
+    height: 60px;
+    /* Using your Logo Link */
+    background-image: url('https://i.postimg.cc/N0f4XxyJ/Hulegeb-Training-Rehabilitation-Logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999999;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+
+  #dante-custom-trigger:hover {
+    transform: scale(1.1); /* Pop effect on hover */
+  }
+
+  /* 3. RIPPLE (PULSE) ANIMATION */
+  #dante-custom-trigger::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: inherit;
+    border-radius: 50%;
+    z-index: -1;
+    animation: ripple-animation 2s infinite;
+  }
+
+  @keyframes ripple-animation {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }

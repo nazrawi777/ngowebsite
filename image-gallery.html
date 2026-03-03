@@ -379,61 +379,23 @@
         </div>
     </div>
     <!-- Main Footer Section End -->
-<div class="chatbot-container">
-        
-        <div class="chat-window" id="chatWindow" aria-hidden="true">
-            
-            <div class="chat-header">
-                <div class="bot-info">
-                    <div class="status-dot"></div>
-                    <div class="bot-details">
-                        <h3>Hulegeb Assistant</h3>
-                        <span>Online</span>
-                    </div>
-                </div>
-                <div class="header-actions">
-                    <button id="clearChatBtn" class="icon-btn" title="Clear Chat">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
-                        </svg>
-                    </button>
-                    <button id="closeChatBtn" class="icon-btn" title="Close">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+<div id="dante-custom-trigger" onclick="toggleDante()"></div>
 
-            <div class="chat-messages" id="chatMessages">
-                <div class="typing-indicator" id="typingIndicator">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
+<div id="dante-pop-wrapper">
+  <iframe src="https://app.dante-ai.com/embed/?kb_id=d90b9c25-45c7-41eb-8581-c0c79f01d09a&token=a188be67-350c-46b4-9328-f4e057cdb507" 
+          width="100%" height="100%" frameborder="0" allow="clipboard-write; clipboard-read; *;microphone *"></iframe>
+</div>
 
-            <div class="chat-input-area">
-                <textarea id="chatInput" placeholder="Ask anything (e.g. pi)..." rows="1"></textarea>
-                <button id="sendBtn" disabled>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="22" y1="2" x2="11" y2="13"></line>
-                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <button class="chat-toggle-btn" id="chatToggleBtn" aria-label="Open Chat">
-            <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-            </svg>
-            <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </button>
-
-    </div>
+<script>
+  function toggleDante() {
+    var chat = document.getElementById("dante-pop-wrapper");
+    if (chat.style.display === "none" || chat.style.display === "") {
+      chat.style.display = "block";
+    } else {
+      chat.style.display = "none";
+    }
+  }
+</script>
     <!-- Main Footer Section End -->
 
     <!-- Jquery Library File -->

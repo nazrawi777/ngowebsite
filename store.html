@@ -60,6 +60,129 @@
 	<link rel="stylesheet" href="css/mousecursor.css">
 	<!-- Main Custom Css -->
 	<link href="css/custom.css" rel="stylesheet" media="screen">
+<style>/* THE "INVISIBLE GLASS" WITH VIVID BORDERS */
+.hg-filter-wrapper {
+    position: relative;
+    z-index: 100;
+    
+    /* Center and Width */
+    margin: 0 auto 40px auto;
+    width: fit-content;
+    min-width: 320px;
+    max-width: 1200px;
+    display: flex;
+    padding: 12px 30px;
+
+    /* ALMOST TRANSPARENT CENTER */
+     background: rgba(217, 235, 238, 0.2);
+    backdrop-filter: blur(15px) saturate(150%);
+    -webkit-backdrop-filter: blur(15px) saturate(150%);
+
+    /* THE BORDER: High visibility gradient logic */
+    /* We use a solid border colored with a hint of your brand blue */
+    border: 1px solid rgba(35, 125, 216, 0.4); 
+    border-radius: 50px; /* Pill shape looks more modern for filters */
+
+    /* THE GLOW: This makes people "see" the glass on a white background */
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.05), /* Subtle ground shadow */
+        0 0 20px rgba(35, 125, 216, 0.1); /* Soft blue outer glow */
+
+    transition: all 0.4s ease;
+}
+
+/* HOVER EFFECT: The border lights up with your primary orange */
+.hg-filter-wrapper:hover {
+    background: rgba(236, 235, 231, 0.2);
+    box-shadow: 0 8px 25px rgba(255, 142, 1, 0.12);
+    transform: translateY(-1px);
+}
+
+/* 2. THE BUTTONS (Interactive Elements) */
+.hg-filter-btn, .hg-dropdown-trigger {
+    border: 1px solid rgba(35, 125, 216, 0.3) !important; /* Secondary Blue border translucent */
+    color: #222 !important;
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(5px);
+    padding: 8px 22px !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    font-size: 14px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy animation */
+}
+
+/* 3. HOVER & ACTIVE STATES (Using Company Colors) */
+.hg-filter-btn:hover, .hg-dropdown-trigger:hover {
+    background: #237dd8 !important; /* Secondary Blue */
+    color: #fff !important;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(35, 125, 216, 0.2);
+    border-color: #237dd8 !important;
+}
+
+.hg-filter-btn.active, .hg-dropdown-trigger.active {
+    background: #ff8e01 !important; /* Primary Orange */
+    color: #fff !important;
+    border-color: #ff8e01 !important;
+    box-shadow: 0 8px 15px rgba(255, 142, 1, 0.3);
+}
+
+/* 4. LIQUID GLASS DROPDOWN MENUS */
+.hg-dropdown-animate {
+    display: none;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 25px !important;
+    padding: 10px !important;
+    margin-top: 10px !important;
+    opacity: 0 ;
+    backdrop-filter: blur(15px) saturate(150%);
+    transform: translateY(15px) !important;
+    transition: all 0.3s ease;
+}
+
+.hg-dropdown-animate.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-item.hg-filter-btn {
+    border: none !important;
+    background: transparent !important;
+    width: 100%;
+    text-align: left;
+    border-radius: 18px !important;
+    margin-bottom: 5px;
+    
+}
+
+.dropdown-item.hg-filter-btn:hover {
+    background: rgba(12, 53, 233, 0.262) !important; /* Light Orange Tint */
+    color: #ff8e01 !important;
+    transform: translateX(2px); /* Slide right effect */
+}
+
+/* 5. PRICE RANGE STYLING (The Custom Track) */
+#hgPriceRange {
+    accent-color: #ff8e01; /* Uses Primary Orange */
+}
+
+#hgPriceLabel {
+    color: #237dd8; /* Uses Secondary Blue */
+}
+
+.hg-price-box {
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 15px;
+    border-radius: 12px;
+}
+</style>
+  
 </head>
 <body>
 
@@ -208,16 +331,55 @@
   </section>
 
   <!-- Products Grid -->
-  <section id="products" class="products-section" aria-labelledby="products-heading">
-    <div class="products-header">
-      <h2 id="products-heading">Browse Our Collection</h2>
-      <p>Experience the tangible difference of craftsmanship that empowers</p>
-    </div>
+<section id="products" class="products-section px-3" aria-labelledby="products-heading">
+  <div class="products-header text-center mb-5">
+    <h2 id="products-heading">Browse Our Collection</h2>
+    <p>Experience the tangible difference of craftsmanship that empowers</p>
+  </div>
 
-    <div class="products-grid" id="products-grid">
-      <!-- Products will be rendered by JavaScript -->
+<div class="container-fluid mb-5">
+    <div class="hg-filter-wrapper d-flex flex-wrap align-items-center justify-content-center gap-3">    
+        <button class="btn hg-filter-btn btn-dark active" data-cat="all">All</button>
+        <button class="btn hg-filter-btn btn-outline-dark" data-cat="sanitary">Sanitary</button>
+
+        <div class="dropdown position-relative">
+            <button class="btn btn-outline-dark hg-dropdown-trigger" type="button">
+                Woven Fabric <i class="fa-solid fa-chevron-down ms-1" style="font-size: 12px;"></i>
+            </button>
+            <ul class="dropdown-menu shadow border-0 hg-dropdown-animate mt-2">
+                <li><button class="dropdown-item hg-filter-btn" data-cat="woven-fabric" data-sub="all">All Woven</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="woven-fabric" data-sub="drapes">Drapes</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="woven-fabric" data-sub="bedding">Bedding</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="woven-fabric" data-sub="clothes">Clothes</button></li>
+            </ul>
+        </div>
+
+        <button class="btn hg-filter-btn btn-outline-dark" data-cat="furniture">Furniture</button>
+
+        <div class="dropdown position-relative">
+            <button class="btn btn-outline-dark hg-dropdown-trigger" type="button">
+                Room Decoration <i class="fa-solid fa-chevron-down ms-1" style="font-size: 12px;"></i>
+            </button>
+            <ul class="dropdown-menu shadow border-0 hg-dropdown-animate mt-2">
+                <li><button class="dropdown-item hg-filter-btn" data-cat="room-decoration" data-sub="all">All Decoration</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="room-decoration" data-sub="carpet">Carpet</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="room-decoration" data-sub="doormat">Doormat</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="room-decoration" data-sub="cotton-mats">Cotton Mats</button></li>
+            </ul>
+        </div>
+
+        <div class="ms-lg-4" style="min-width: 200px;">
+            <div class="d-flex justify-content-between mb-1">
+                <span class="small fw-bold text-muted text-uppercase">Max Price:</span>
+                <span id="hgPriceLabel" class="small fw-bold text-primary">15,000 ETB</span>
+            </div>
+            <input type="range" class="form-range" id="hgPriceRange" min="0" max="15000" step="100" value="15000">
+        </div>
     </div>
-  </section>
+</div>
+
+  <div class="products-grid" id="products-grid"></div>
+</section>
 
 
     <!-- Main Footer Section Start -->
@@ -239,7 +401,7 @@
                             <div class="footer-contact-detail">
                                 <div class="footer-contact-item">
                                     <p>Toll free customer care</p>
-                                    <h3><a href="tel:+251-11-3-72-66-47">+251-11-3-72-66-47</a></h3>
+                                    <h3><a href="tel:+123456789">+123 456 789</a></h3>
                                 </div>
                                 
                                 <div class="footer-contact-item">
@@ -414,51 +576,124 @@
   <script src="js/products-data.js"></script>
   <script src="js/impact-counters.js"></script>
   <script src="js/artisan-modal.js"></script>
-  <script>
-    // Render product grid
-    document.addEventListener('DOMContentLoaded', function() {
-      const grid = document.getElementById('products-grid');
-      if (!grid || !window.PRODUCTS) return;
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('products-grid');
+    const priceRange = document.getElementById('hgPriceRange');
+    const priceLabel = document.getElementById('hgPriceLabel');
+    const filterBtns = document.querySelectorAll('.hg-filter-btn');
+    const dropdownTriggers = document.querySelectorAll('.hg-dropdown-trigger');
 
-      window.PRODUCTS.forEach((product, index) => {
-        const hasColorVariants = product.variants.some(v => v.hex);
-        const hasComparePrice = product.compare_at_price && product.compare_at_price > product.price;
+    if (!grid || !window.PRODUCTS) return;
 
-        const card = document.createElement('a');
-        card.href = `products.html?slug=${product.slug}`;
-        card.className = 'product-card animate-fade-up';
-        card.style.animationDelay = `${0.1 * (index % 8)}s`;
+    let state = { category: 'all', subcategory: 'all', maxPrice: 15000 };
 
-        card.innerHTML = `
-          <div class="product-image">
-            <img 
-              src="${window.getProductImage(product.slug)}" 
-              alt="${product.brand} ${product.title}"
-              loading="lazy"
-            >
-            ${hasComparePrice ? '<span class="product-badge">Sale</span>' : ''}
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">${product.title}</h3>
-
-            ${hasColorVariants ? `
-              <div class="product-swatches">
-                ${product.variants.filter(v => v.hex).slice(0, 4).map(v => `
-                  <span class="product-swatch" style="background-color: ${v.hex}" title="${v.name}"></span>
-                `).join('')}
-              </div>
-            ` : ''}
-            <div class="product-price">
-              <span class="current">${window.formatPrice(product.price, product.currency)}</span>
-              ${hasComparePrice ? `<span class="compare">${window.formatPrice(product.compare_at_price, product.currency)}</span>` : ''}
-            </div>
-          </div>
-        `;
-
-        grid.appendChild(card);
-      });
+    // --- 1. THE DROPDOWN BYPASS ENGINE ---
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation(); // Stops other scripts from interfering
+            const menu = trigger.nextElementSibling;
+            
+            // Close any open menus first
+            document.querySelectorAll('.hg-dropdown-animate').forEach(m => {
+                if (m !== menu) m.classList.remove('show');
+            });
+            
+            // Toggle the clicked menu
+            menu.classList.toggle('show');
+        });
     });
-  </script>
+
+    // Close menu when clicking anywhere else on the screen
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.hg-dropdown-animate').forEach(m => m.classList.remove('show'));
+    });
+    // -------------------------------------
+
+    // --- 2. THE FILTER ENGINE ---
+   function renderProducts() {
+        grid.innerHTML = '';
+        const filtered = window.PRODUCTS.filter(p => {
+            const catMatch = state.category === 'all' || p.category === state.category;
+            const subMatch = state.subcategory === 'all' || p.subcategory === state.subcategory;
+            const price = p.price || (p.variants && p.variants[0]?.price) || 0;
+            return catMatch && subMatch && price <= state.maxPrice;
+        });
+
+        filtered.forEach((product, index) => {
+            const card = document.createElement('a');
+            card.href = `products.html?slug=${product.slug}`;
+            card.className = 'product-card animate-fade-up';
+            card.style.animationDelay = `${0.05 * (index % 12)}s`;
+            
+            const displayPrice = product.price || product.variants?.[0]?.price || 0;
+            
+            // This is the part I brought back: Category Label + Description
+            card.innerHTML = `
+                <div class="product-image">
+                    <img src="${window.getProductImage(product.slug)}" alt="${product.title}" loading="lazy">
+                    ${product.compare_at_price > displayPrice ? '<span class="product-badge">Sale</span>' : ''}
+                </div>
+                <div class="product-info">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <h3 class="product-title m-0">${product.title}</h3>
+                        <span style="font-size: 10px; font-weight: 700; color: #ff8e01; text-transform: uppercase; letter-spacing: 0.5px;">
+                            ${product.category || ''}
+                        </span>
+                    </div>
+                    <p class="product-description text-truncate" style="font-size: 13px; color: #666; margin-bottom: 10px;">
+                        ${product.short_description || ''}
+                    </p>
+                    <div class="product-price">
+                        <span class="current" style="font-weight: 700; color: #222;">
+                            ${window.formatPrice(displayPrice)}
+                        </span>
+                    </div>
+                </div>`;
+            grid.appendChild(card);
+        });
+    }
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Clear active states from ALL buttons and triggers
+            document.querySelectorAll('.hg-filter-btn').forEach(b => {
+                b.classList.remove('active', 'btn-dark');
+                if(!b.classList.contains('dropdown-item')) b.classList.add('btn-outline-dark');
+            });
+            document.querySelectorAll('.hg-dropdown-trigger').forEach(t => {
+                t.classList.remove('active', 'btn-dark');
+                t.classList.add('btn-outline-dark');
+            });
+            
+            // Set state
+            state.category = btn.getAttribute('data-cat');
+            state.subcategory = btn.getAttribute('data-sub') || 'all';
+
+            // Highlight Logic
+            if (btn.classList.contains('dropdown-item')) {
+                const parentBtn = btn.closest('.dropdown').querySelector('.hg-dropdown-trigger');
+                parentBtn.classList.remove('btn-outline-dark');
+                parentBtn.classList.add('active', 'btn-dark');
+            } else {
+                btn.classList.remove('btn-outline-dark');
+                btn.classList.add('active', 'btn-dark');
+            }
+            
+            renderProducts();
+        });
+    });
+
+    priceRange.addEventListener('input', (e) => {
+        state.maxPrice = parseInt(e.target.value);
+        priceLabel.innerText = `${state.maxPrice.toLocaleString()} ETB`;
+        renderProducts();
+    });
+
+    renderProducts();
+});
+</script>
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->

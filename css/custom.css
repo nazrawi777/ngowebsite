@@ -470,7 +470,7 @@ header.main-header {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 10px;
-    z-index: 100;
+    z-index: 1000;
     transition: all 0.3s ease;
 }
 
@@ -7263,7 +7263,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    z-index: 9998;
+    z-index: 1000000000000000;
     opacity: 0;
     transform: translateY(20px) scale(0.95);
     pointer-events: none;

@@ -463,7 +463,7 @@ header.main-header {
     top: 1%;
     /* CHANGED: 3% instead of 5% moves it slightly left */
     left: 3%; 
-    width: 92%;
+    width: 94%;
     
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
@@ -481,7 +481,7 @@ header.main-header.sticky {
     position: fixed;
     top: 10px;
     left: 3%; /* Keep it consistent with the non-sticky state */
-    width: 94%; /* Slightly wider when sticky if you like */
+    width: 96%; /* Slightly wider when sticky if you like */
 }
 
 @media (max-width: 991px) {

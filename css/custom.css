@@ -463,7 +463,7 @@ header.main-header {
     top: 1%;
     /* CHANGED: 3% instead of 5% moves it slightly left */
     left: 3%; 
-    width: 90%;
+    width: 92%;
     
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);

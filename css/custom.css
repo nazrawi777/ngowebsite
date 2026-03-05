@@ -509,19 +509,22 @@ header.main-header.sticky {
 
 
 .navbar{
-	padding: 20px 0;
+	padding: 0px 0;
 	align-items: center;
 }
 
 .navbar-brand{
-	padding: 0;
+	padding: 0px;
 	margin: 0;
+	width: 20%;
 }
-
+.navbar-brand img{
+	width: 100%;
+}
 .main-menu .nav-menu-wrapper{
 	flex: 1;
 	text-align: center;
-	margin: 0 20px;
+	margin: 0 1px;
 }
 
 .main-menu .nav-menu-wrapper > ul{

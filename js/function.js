@@ -20,34 +20,34 @@
 
 
 
-    $(document).ready(function () {
+$(document).ready(function () {
 
-        var currentPage = window.location.pathname.split("/").pop();
+    // 1. Get the current URL segment, and STRIP the .html off it
+    var currentPage = window.location.pathname.replace(/\/$/, "").replace(".html", "").split("/").pop();
 
-        // Fix for home page
-        if (currentPage === "" || currentPage === "/") {
-            currentPage = "index.html";
+    // 2. Fix for home page
+    if (currentPage === "" || currentPage === "index") {
+        currentPage = "index";
+    }
+
+    // 3. Loop through the links
+    $('#menu a.nav-link').each(function () {
+        var linkHref = $(this).attr('href');
+
+        // Ignore empty or #
+        if (!linkHref || linkHref === "#") return;
+
+        // 4. STRIP the .html off the href attribute so it matches Netlify's URL
+        var linkPage = linkHref.replace(".html", "");
+
+        // 5. The Bulletproof Comparison
+        if (linkPage === currentPage) {
+            $(this).addClass('active'); // Activate link
+            $(this).closest('li').addClass('active'); // Activate LI
+            $(this).parents('.submenu').addClass('active'); // Activate parent submenu
         }
-
-        $('#menu a.nav-link').each(function () {
-            var linkPage = $(this).attr('href');
-
-            // Ignore empty or #
-            if (!linkPage || linkPage === "#") return;
-
-            if (linkPage === currentPage) {
-                // Activate current link
-                $(this).addClass('active');
-
-                // Activate LI
-                $(this).closest('li').addClass('active');
-
-                // Activate parent submenu if exists
-                $(this).parents('.submenu').addClass('active');
-            }
-        });
-
     });
+});
 
 
 

@@ -1,8 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import HeroSlide, GalleryItem, BlogPost
+from django.core.paginator import Paginator
 
 
 def index(request):
-    return render(request, 'index.html')
+    hero_slides = HeroSlide.objects.filter(is_active=True)
+    return render(request, 'index.html', {'hero_slides': hero_slides})
 
 
 def about(request):
@@ -18,7 +21,18 @@ def services(request):
 
 
 def blog(request):
-    return render(request, 'blog.html')
+    blog_posts = BlogPost.objects.filter(is_published=True)
+    paginator = Paginator(blog_posts, 9)  # 9 posts per page
+    
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    
+    return render(request, 'blog.html', {'page_obj': page_obj})
+
+
+def blog_detail(request, slug):
+    post = get_object_or_404(BlogPost, slug=slug, is_published=True)
+    return render(request, 'blog-detail.html', {'post': post})
 
 
 def contact(request):
@@ -38,7 +52,13 @@ def video_gallery(request):
 
 
 def image_gallery(request):
-    return render(request, 'image-gallery.html')
+    gallery_items = GalleryItem.objects.filter(is_active=True)
+    paginator = Paginator(gallery_items, 12)  # 12 items per page
+    
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    
+    return render(request, 'image-gallery.html', {'page_obj': page_obj})
 
 
 def donation(request):

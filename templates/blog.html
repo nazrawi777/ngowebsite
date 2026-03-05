@@ -141,6 +141,7 @@
     <div class="page-blog">
         <div class="container">
             <div class="row">
+                {% for post in page_obj %}
                 <div class="col-lg-4 col-md-6">
                     <!-- Post Item Start -->
                     <div class="post-item wow fadeInUp">
@@ -149,16 +150,14 @@
                             <!-- Post Item Tag Start -->
                             <div class="post-item-meta">
                                 <ul>
-                                    <li>10 feb, 2025</li>
+                                    <li>{{ post.published_date|date:"d M, Y" }}</li>
                                 </ul>
                             </div>
                             <!-- Post Item Tag End -->
 
                             <!-- Post Item Content Start -->
                             <div class="post-item-content">
-                                <h2><a href="#">Beyond Charity: How a Disabled-Led Model Builds True Independence
-Explore the power of empowerment over aid through Hulegeb’s 70-year journey.
-a></h2>
+                                <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
                             </div>
                             <!-- Post Item Content End -->
                         </div>
@@ -166,9 +165,9 @@ a></h2>
 
                         <!-- Post Featured Image Start-->
                         <div class="post-featured-image">
-                            <a href="#" data-cursor-text="View">
+                            <a href="{{ post.get_absolute_url }}" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="https://i.postimg.cc/yN3JYd7J/L2A6101.jpg" alt="">
+                                    <img src="{{ post.get_featured_image_url }}" alt="{{ post.image_alt }}">
                                 </figure>
                             </a>
                         </div>
@@ -176,237 +175,66 @@ a></h2>
                         
                         <!-- Blog Item Button Start -->
                         <div class="blog-item-btn">
-                            <a href="#" class="readmore-btn">donate</a>
+                            <a href="{{ post.get_absolute_url }}" class="readmore-btn">read more</a>
                         </div>
                         <!-- Blog Item Button End -->
                     </div>
                     <!-- Post Item End -->
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Post Item Header Start -->
-                        <div class="post-item-header">
-                            <!-- Post Item Tag Start -->
-                            <div class="post-item-meta">
-                                <ul>
-                                    <li>07 feb, 2025</li>
-                                </ul>
-                            </div>
-                            <!-- Post Item Tag End -->
-
-                            <!-- Post Item Content Start -->
-                            <div class="post-item-content">
-                                <h2><a href="#">Weaving Dignity: A Day in the Life of a Hulegeb Artisan
-An intimate look at how skill, craft, and purpose come together on the production floor
-</a></h2>
-                            </div>
-                            <!-- Post Item Content End -->
-                        </div>
-                        <!-- Post Item Header End -->
-
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image">
-                            <a href="#" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="https://i.postimg.cc/KjjZBjgF/L2A6116.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Post Featured Image End -->
-                        
-                        <!-- Blog Item Button Start -->
-                        <div class="blog-item-btn">
-                            <a href="#" class="readmore-btn">donate</a>
-                        </div>
-                        <!-- Blog Item Button End -->
-                    </div>
-                    <!-- Post Item End -->
+                {% empty %}
+                <div class="col-12">
+                    <p class="text-center">No blog posts available yet.</p>
                 </div>
+                {% endfor %}
+            </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Post Item Header Start -->
-                        <div class="post-item-header">
-                            <!-- Post Item Tag Start -->
-                            <div class="post-item-meta">
-                                <ul>
-                                    <li>04 feb, 2025</li>
-                                </ul>
-                            </div>
-                            <!-- Post Item Tag End -->
-
-                            <!-- Post Item Content Start -->
-                            <div class="post-item-content">
-                                <h2><a href="#">From Trainee to Trainer: Stories of Transformation at Hulegeb
-Personal journeys of individuals who learned a trade and now lead others toward self-reliance.
-</a></h2>
-                            </div>
-                            <!-- Post Item Content End -->
-                        </div>
-                        <!-- Post Item Header End -->
-
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image">
-                            <a href="#" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="https://i.postimg.cc/2SsVYQLX/L2A6618.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Post Featured Image End -->
-                        
-                        <!-- Blog Item Button Start -->
-                        <div class="blog-item-btn">
-                            <a href="#" class="readmore-btn">donate</a>
-                        </div>
-                        <!-- Blog Item Button End -->
-                    </div>
-                    <!-- Post Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp" data-wow-delay="0.6s">
-                        <!-- Post Item Header Start -->
-                        <div class="post-item-header">
-                            <!-- Post Item Tag Start -->
-                            <div class="post-item-meta">
-                                <ul>
-                                    <li>01 feb, 2025</li>
-                                </ul>
-                            </div>
-                            <!-- Post Item Tag End -->
-
-                            <!-- Post Item Content Start -->
-                            <div class="post-item-content">
-                                <h2><a href="#">Inclusive by Design: How We Adapt Tools & Training for All Abilities
-A behind-the-scenes view of our adaptive workshops and learner-centered approach.
-</a></h2>
-                            </div>
-                            <!-- Post Item Content End -->
-                        </div>
-                        <!-- Post Item Header End -->
-
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image">
-                            <a href="#" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="https://iili.io/qKYYo8B.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Post Featured Image End -->
-                        
-                        <!-- Blog Item Button Start -->
-                        <div class="blog-item-btn">
-                            <a href="#" class="readmore-btn">donate</a>
-                        </div>
-                        <!-- Blog Item Button End -->
-                    </div>
-                    <!-- Post Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp" data-wow-delay="0.8s">
-                        <!-- Post Item Header Start -->
-                        <div class="post-item-header">
-                            <!-- Post Item Tag Start -->
-                            <div class="post-item-meta">
-                                <ul>
-                                    <li>28 jan, 2025</li>
-                                </ul>
-                            </div>
-                            <!-- Post Item Tag End -->
-
-                            <!-- Post Item Content Start -->
-                            <div class="post-item-content">
-                                <h2><a href="#">More Than a Mill: How Our Milling Service Grinds Barriers, Not Just Grain
-The story behind a practical service that fuels both community needs and social impact.
-</a></h2>
-                            </div>
-                            <!-- Post Item Content End -->
-                        </div>
-                        <!-- Post Item Header End -->
-
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image">
-                            <a href="#" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="https://iili.io/qKYYGwX.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Post Featured Image End -->
-                        
-                        <!-- Blog Item Button Start -->
-                        <div class="blog-item-btn">
-                            <a href="#" class="readmore-btn">donate</a>
-                        </div>
-                        <!-- Blog Item Button End -->
-                    </div>
-                    <!-- Post Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp" data-wow-delay="1s">
-                        <!-- Post Item Header Start -->
-                        <div class="post-item-header">
-                            <!-- Post Item Tag Start -->
-                            <div class="post-item-meta">
-                                <ul>
-                                    <li>25 jan, 2025</li>
-                                </ul>
-                            </div>
-                            <!-- Post Item Tag End -->
-
-                            <!-- Post Item Content Start -->
-                            <div class="post-item-content">
-                                <h2><a href="#">Land, Legacy, and Future: The Story Behind Hulegeb’s Strategic Asset Development
-How our endowed land is being transformed into a sustainable hub for generations to come.
-</a></h2>
-                            </div>
-                            <!-- Post Item Content End -->
-                        </div>
-                        <!-- Post Item Header End -->
-
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image">
-                            <a href="#" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="https://iili.io/qKAv67e.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Post Featured Image End -->
-                        
-                        <!-- Blog Item Button Start -->
-                        <div class="blog-item-btn">
-                            <a href="#" class="readmore-btn">donate</a>
-                        </div>
-                        <!-- Blog Item Button End -->
-                    </div>
-                    <!-- Post Item End -->
-                </div>
-
+            <!-- Pagination Start -->
+            {% if page_obj.has_other_pages %}
+            <div class="row">
                 <div class="col-lg-12">
-                    <!-- Page Pagination Start -->
-                    <div class="page-pagination wow fadeInUp" data-wow-delay="1.2s">
-                        <ul class="pagination">
-                            <li><a href="blog.html#"><i class="fa-solid fa-angle-left"></i></a></li>
-                            <li class="active"><a href="blog.html#">1</a></li>
-                            <li><a href="blog.html#">2</a></li>
-                            <li><a href="blog.html#">3</a></li>
-                            <li><a href="blog.html#"><i class="fa-solid fa-angle-right"></i></a></li>
-                        </ul>
+                    <div class="pagination-wrap" style="margin-top: 40px;">
+                        <nav>
+                            <ul class="pagination justify-content-center">
+                                {% if page_obj.has_previous %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=1" aria-label="First">
+                                        <span aria-hidden="true">&laquo;&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                {% endif %}
+
+                                {% for num in page_obj.paginator.page_range %}
+                                    {% if page_obj.number == num %}
+                                    <li class="page-item active"><a class="page-link">{{ num }}</a></li>
+                                    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if page_obj.has_next %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last">
+                                        <span aria-hidden="true">&raquo;&raquo;</span>
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </nav>
                     </div>
-                    <!-- Page Pagination End -->
                 </div>
             </div>
+            {% endif %}
+            <!-- Pagination End -->
         </div>
     </div>
     <!-- Page Blog End -->

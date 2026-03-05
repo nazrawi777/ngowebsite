@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -9,9 +10,9 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Awaiken">
 	<!-- Page Title -->
-    <title>Meet Our Dedicated Team | Hulegeb Training & Rehabilitation</title>
-    <meta name="description" content="Meet the experts and compassionate professionals behind Hulegeb. Our team is committed to delivering world-class training and rehabilitation.">
-    <link rel="canonical" href="https://www.hulegebberhan.org/team.html">
+    <title>Our Programs & Initiatives | Hulegeb Training & Rehab</title>
+    <meta name="description" content="Explore Hulegeb's specialized programs designed for vocational skill-building, social integration, and long-term rehabilitation success.">
+    <link rel="canonical" href="https://www.hulegebberhan.org/programmes.html">
 	<!-- Favicon Icon -->
 		<link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/hjxJwj9v/Hulegeb-Training-Rehabilitation-Logo-2.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -20,21 +21,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap" rel="stylesheet">
 	<!-- Bootstrap Css -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
 	<!-- SlickNav Css -->
-	<link href="css/slicknav.min.css" rel="stylesheet">
+	<link href="{% static 'css/slicknav.min.css' %}" rel="stylesheet">
 	<!-- Swiper Css -->
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
 	<!-- Font Awesome Icon Css-->
-	<link href="css/all.min.css" rel="stylesheet" media="screen">
+	<link href="{% static 'css/all.min.css' %}" rel="stylesheet" media="screen">
 	<!-- Animated Css -->
-	<link href="css/animate.css" rel="stylesheet">
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet">
     <!-- Magnific Popup Core Css File -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
 	<!-- Mouse Cursor Css File -->
-	<link rel="stylesheet" href="css/mousecursor.css">
+	<link rel="stylesheet" href="{% static 'css/mousecursor.css' %}">
 	<!-- Main Custom Css -->
-	<link href="css/custom.css" rel="stylesheet" media="screen">
+	<link href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">
 </head>
 <body>
 
@@ -53,7 +54,7 @@
 			<nav class="navbar navbar-expand-lg">
 				<div class="container">
 					<!-- Logo Start -->
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="{% url 'index' %}">
 						<img src="https://i.postimg.cc/hjxJwj9v/Hulegeb-Training-Rehabilitation-Logo-2.png" alt="Logo">
 					</a>
 					<!-- Logo End -->
@@ -62,29 +63,29 @@
 					<div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li> 
                                 <li class="nav-item submenu"><a class="nav-link" href="#">About</a>
                                     <ul>                                        
-                                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="ourhistory.html">Our Legacy</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'ourhistory' %}">Our Legacy</a></li>
                                        
                                     </ul>
                                 </li>                              
                                 
-                                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
                                 <li>
-    <a href="store.html">Products</a>
+    <a href="{% url 'store' %}">Products</a>
 </li>
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
                                 <li class="nav-item submenu"><a class="nav-link" href="#" id="abthead">Pages</a>
                                     <ul>                                        
-                                        <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="programmes.html">Our Programs</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="video-gallery.html">Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="donation.html">Donation</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'team' %}">Our Team</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'programmes' %}">Our Programs</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'video_gallery' %}">Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'donation' %}">Donation</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li> 
                                 <li>
     <a href="login.html">
         <i class="fa-solid fa-user"></i>
@@ -95,7 +96,7 @@
                         <!-- Contact Now Box Start -->
                         <div class="contact-now-box">
                             <div class="icon-box">
-                                <img src="images/icon-phone.svg" alt="">
+                                <img src="{% static 'images/icon-phone.svg' %}" alt="">
                             </div>
                             <div class="contact-now-box-content">
                                 <p>need help !</p>
@@ -120,11 +121,11 @@
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-2" data-cursor="-opaque"><span>Our</span> team</h1>
+                        <h1 class="text-anime-style-2" data-cursor="-opaque"><span>Our</span> Programmes</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">team</li>
+                                <li class="breadcrumb-item"><a href="{% url 'index' %}">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Programmes</li>
                             </ol>
                         </nav>
                     </div>
@@ -135,213 +136,151 @@
     </div>
     <!-- Page Header End -->
 
-    <!-- Page Team Start -->
-    <div class="page-team">
+    <!-- Page Programs Start -->
+    <div class="page-programs">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="team-single.html" data-cursor-text="View">
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="https://i.postimg.cc/L8LtNNZW/L2A7342.jpg" alt="">
+                                    <img src="https://i.postimg.cc/VvQRbrh9/L2A6687.jpg" alt="">
                                 </figure>
                             </a>
-                        </div>	
-                        <!-- Team Image End -->
-
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="team-single.html">kristin watson</a></h3>
-                            <p>founder & executive director</p>
                         </div>
-                        <!-- Team Content End -->
-                        
-                        
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Women's empowerment</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Team Item Start -->
+                    <!-- Program Item End -->                    
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="https://i.postimg.cc/KjjZBjgF/L2A6116.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Housing assistance</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program Item End -->                    
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="https://iili.io/qKu8fVV.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Development and Job Training</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program Item End -->                    
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="team-single.html" data-cursor-text="View">
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/team-2.jpg" alt="">
+                                    <img src="https://iili.io/qKAMev2.jpg" alt="">
                                 </figure>
                             </a>
-                        </div>	
-                        <!-- Team Image End -->
-
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="team-single.html">sophia martinez</a></h3>
-                            <p>communications director</p>
                         </div>
-                        <!-- Team Content End -->
-                        
-                        
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Youth leadership program</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Team Item Start -->
+                    <!-- Program Item End -->                    
                 </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="team-single.html" data-cursor-text="View">
+                
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/team-3.jpg" alt="">
+                                    <img src="https://iili.io/qKu4fF2.jpg" alt="">
                                 </figure>
                             </a>
-                        </div>	
-                        <!-- Team Image End -->
-
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="team-single.html">michael carter</a></h3>
-                            <p>program manager</p>
                         </div>
-                        <!-- Team Content End -->
-                        
-                        
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Volunteer engagement</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Team Item Start -->
+                    <!-- Program Item End -->                    
                 </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.6s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="team-single.html" data-cursor-text="View">
+                
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp" data-wow-delay="1s">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/team-4.jpg" alt="">
+                                    <img src="https://iili.io/qKAMALg.jpg" alt="">
                                 </figure>
                             </a>
-                        </div>	
-                        <!-- Team Image End -->
-
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="team-single.html">olivia thompson</a></h3>
-                            <p>community outreach specialist</p>
                         </div>
-                        <!-- Team Content End -->
-                        
-                        
-                    </div>
-                    <!-- Team Item Start -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.8s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="team-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-5.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>	
-                        <!-- Team Image End -->
-
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="team-single.html">ethan garcia</a></h3>
-                            <p>policy advisor</p>
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Disability support</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
                         </div>
-                        <!-- Team Content End -->
-                        
-                        
                     </div>
-                    <!-- Team Item Start -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="1s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="team-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-6.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>	
-                        <!-- Team Image End -->
-
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="team-single.html">isabella nguyen</a></h3>
-                            <p>wellness coordinator</p>
-                        </div>
-                        <!-- Team Content End -->
-                        
-                        
-                    </div>
-                    <!-- Team Item Start -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="1.2s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="team-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-7.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>	
-                        <!-- Team Image End -->
-
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="team-single.html">william davis</a></h3>
-                            <p>environmental program lead</p>
-                        </div>
-                        <!-- Team Content End -->
-                        
-                        
-                    </div>
-                    <!-- Team Item Start -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp"  data-wow-delay="1.4s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="team-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-8.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>	
-                        <!-- Team Image End -->
-
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="team-single.html">ava patel</a></h3>
-                            <p>volunteer coordinator</p>
-                        </div>
-                        <!-- Team Content End -->
-                        
-                        
-                    </div>
-                    <!-- Team Item Start -->
+                    <!-- Program Item End -->                    
                 </div>
             </div>
         </div>
     </div>
-    <!-- Page Team End -->
+    <!-- Page Programs End -->
 
     <!-- Main Footer Section Start -->
     <footer class="main-footer">
@@ -376,10 +315,10 @@
                             <div class="footer-social-links">
                                 <h3>Follow on</h3>
                                 <ul>
-                                    <li><a href="team.html#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                    <li><a href="team.html#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="team.html#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="team.html#"><i class="fa-brands fa-instagram"></i></a></li>                                    								
+                                    <li><a href="programmes.html#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                                    <li><a href="programmes.html#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="programmes.html#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="programmes.html#"><i class="fa-brands fa-instagram"></i></a></li>                                    								
                                 </ul>
                             </div>
                             <!-- Footer Social Links End -->
@@ -390,7 +329,7 @@
                         <div class="footer-links-box">
                             <!-- Newsletter Form Start -->
                             <div class="newsletter-form">
-                                <form id="newsletterForm" action="team.html#" method="POST">
+                                <form id="newsletterForm" action="programmes.html#" method="POST">
                                     <div class="form-group">
                                         <input type="email" name="email" class="form-control" id="mail" placeholder="Enter Your Email" required="">
                                         <button type="submit" class="newsletter-btn"><i class="fa-regular fa-paper-plane"></i></button>
@@ -403,10 +342,10 @@
                             <div class="footer-links">
                                 <h3>Quick link</h3>
                                 <ul>
-                                    <li><a href="index.html">home</a></li>
-                                    <li><a href="about.html">about us</a></li>
-                                    <li><a href="services.html">services</a></li>
-                                    <li><a href="blog.html">blog</a></li>
+                                    <li><a href="{% url 'index' %}">home</a></li>
+                                    <li><a href="{% url 'about' %}">about us</a></li>
+                                    <li><a href="{% url 'services' %}">services</a></li>
+                                    <li><a href="{% url 'blog' %}">blog</a></li>
                                 </ul>
                             </div>
                             <!-- Footer Links End -->
@@ -427,10 +366,10 @@
                             <div class="footer-links">
                                 <h3>support</h3>
                                 <ul>
-                                    <li><a href="team.html#">help</a></li>
-                                    <li><a href="team.html#">privacy policy</a></li>
-                                    <li><a href="team.html#">term's & condition</a></li>
-                                    <li><a href="team.html#">support</a></li>
+                                    <li><a href="programmes.html#">help</a></li>
+                                    <li><a href="programmes.html#">privacy policy</a></li>
+                                    <li><a href="programmes.html#">term's & condition</a></li>
+                                    <li><a href="programmes.html#">support</a></li>
                                 </ul>
                             </div>
                             <!-- Footer Links End -->
@@ -491,37 +430,37 @@
     <!-- Main Footer Section End -->
 
     <!-- Jquery Library File -->
-    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
     <!-- Bootstrap js file -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- Validator js file -->
-    <script src="js/validator.min.js"></script>
+    <script src="{% static 'js/validator.min.js' %}"></script>
     <!-- SlickNav js file -->
-    <script src="js/jquery.slicknav.js"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
     <!-- Swiper js file -->
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
     <!-- Counter js file -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
     <!-- Isotop js file -->
-	<script src="js/isotope.min.js"></script>
+	<script src="{% static 'js/isotope.min.js' %}"></script>
     <!-- Magnific js file -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
     <!-- SmoothScroll -->
-    <script src="js/SmoothScroll.js"></script>
+    <script src="{% static 'js/SmoothScroll.js' %}"></script>
     <!-- Parallax js -->
-    <script src="js/parallaxie.js"></script>
+    <script src="{% static 'js/parallaxie.js' %}"></script>
     <!-- MagicCursor js file -->
-    <script src="js/gsap.min.js"></script>
-    <script src="js/magiccursor.js"></script>
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/magiccursor.js' %}"></script>
     <!-- Text Effect js file -->
-    <script src="js/SplitText.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="{% static 'js/SplitText.js' %}"></script>
+    <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
     <!-- YTPlayer js File -->
-    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
     <!-- Wow js file -->
-    <script src="js/wow.min.js"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
     <!-- Main Custom js file -->
-    <script src="js/function.js"></script>
+    <script src="{% static 'js/function.js' %}"></script>
 </body>
 </html>

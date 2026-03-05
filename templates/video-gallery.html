@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -9,9 +10,9 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Awaiken">
 	<!-- Page Title -->
-    <title>Donate to Hulegeb | Change a Life Through Rehabilitation</title>
-    <meta name="description" content="Your donation provides training and rehabilitation to those who need it most. Securely contribute to Hulegeb Training & Rehabilitation today.">
-    <link rel="canonical" href="https://www.hulegebberhan.org/donation.html">
+    <title> Gallery | See Our Impact in Action | Hulegeb</title>
+    <meta name="description" content="Watch Hulegeb's mission in motion. Our video gallery showcases our training centers, rehabilitation success stories, and community outreach.">
+    <link rel="canonical" href="https://www.hulegebberhan.org/video-gallery.html">
 	<!-- Favicon Icon -->
 		<link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/hjxJwj9v/Hulegeb-Training-Rehabilitation-Logo-2.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -20,21 +21,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap" rel="stylesheet">
 	<!-- Bootstrap Css -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
 	<!-- SlickNav Css -->
-	<link href="css/slicknav.min.css" rel="stylesheet">
+	<link href="{% static 'css/slicknav.min.css' %}" rel="stylesheet">
 	<!-- Swiper Css -->
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
 	<!-- Font Awesome Icon Css-->
-	<link href="css/all.min.css" rel="stylesheet" media="screen">
+	<link href="{% static 'css/all.min.css' %}" rel="stylesheet" media="screen">
 	<!-- Animated Css -->
-	<link href="css/animate.css" rel="stylesheet">
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet">
     <!-- Magnific Popup Core Css File -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
 	<!-- Mouse Cursor Css File -->
-	<link rel="stylesheet" href="css/mousecursor.css">
+	<link rel="stylesheet" href="{% static 'css/mousecursor.css' %}">
 	<!-- Main Custom Css -->
-	<link href="css/custom.css" rel="stylesheet" media="screen">
+	<link href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">
 </head>
 <body>
 
@@ -53,7 +54,7 @@
 			<nav class="navbar navbar-expand-lg">
 				<div class="container">
 					<!-- Logo Start -->
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="{% url 'index' %}">
 						<img src="https://i.postimg.cc/hjxJwj9v/Hulegeb-Training-Rehabilitation-Logo-2.png" alt="Logo">
 					</a>
 					<!-- Logo End -->
@@ -62,29 +63,29 @@
 					<div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li> 
                                 <li class="nav-item submenu"><a class="nav-link" href="#">About</a>
                                     <ul>                                        
-                                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="ourhistory.html">Our Legacy</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'ourhistory' %}">Our Legacy</a></li>
                                        
                                     </ul>
                                 </li>                              
                                 
-                                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
                                 <li>
-    <a href="store.html">Products</a>
+    <a href="{% url 'store' %}">Products</a>
 </li>
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
                                 <li class="nav-item submenu"><a class="nav-link" href="#" id="abthead">Pages</a>
                                     <ul>                                        
-                                        <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="programmes.html">Our Programs</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="video-gallery.html">Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="donation.html">Donation</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'team' %}">Our Team</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'programmes' %}">Our Programs</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'video_gallery' %}">Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'donation' %}">Donation</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li> 
                                 <li>
     <a href="login.html">
         <i class="fa-solid fa-user"></i>
@@ -95,7 +96,7 @@
                         <!-- Contact Now Box Start -->
                         <div class="contact-now-box">
                             <div class="icon-box">
-                                <img src="images/icon-phone.svg" alt="">
+                                <img src="{% static 'images/icon-phone.svg' %}" alt="">
                             </div>
                             <div class="contact-now-box-content">
                                 <p>need help !</p>
@@ -120,11 +121,11 @@
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-2" data-cursor="-opaque">Donation</h1>
+                        <h1 class="text-anime-style-2" data-cursor="-opaque"><span>Gallery</span></h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">donation</li>
+                                <li class="breadcrumb-item"><a href="{% url 'index' %}">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
                             </ol>
                         </nav>
                     </div>
@@ -135,102 +136,70 @@
     </div>
     <!-- Page Header End -->
 
-    <!-- Page Donation Start -->
-    <div class="page-donation">
+    <!-- Page Video Gallery Start -->
+    <div class="page-video-gallery">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <!-- Donation Box Start -->
-                    <div class="donation-box">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">donate now</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Your donation</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Your donation is more than just financial support; it is a powerful act of kindness that drives meaningful change. Every contribution helps provide essential resources, support impactful programs, and empower communities in need.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Campaign Donation Form Start -->
-                        <div class="donate-form campaign-donate-form">
-                            <form id="donateForm" action="donation.html#" method="POST">
-                                <div class="campaign-donate-value wow fadeInUp" data-wow-delay="0.4s">
-                                    
-                    
-                                    <fieldset class="donate-value-box">
-                                        <div class="donate-value"> 
-                                            <input type="radio" id="value1" name="value" value="value1" checked>
-                                            <label for="value1"> Commercial Bank of Ethiopia  <span>1000583502037</span></label>
-                                        </div>
- 
-                                        <div class="donate-value">
-                                            <input type="radio" id="value3" name="value" value="value3">
-                                            <label for="value3">Abyssinia Bank <span>128432755</span></label>
-                                        </div>
-
-                                        <div class="donate-value">
-                                            <input type="radio" id="value5" name="value" value="value5">
-                                            <label for="value5">Ahadu Bank <span>500789383646</span></label>
-                                        </div>
-                                        
-                                        
-                                    </fieldset>
-                                </div>
-                    
-                               
-                                
-                                <!-- Donar Personal Info Start -->
-                                <div class="donar-personal-info">
-                                    <!-- Section Title Start -->
-                                    <div class="section-title">
-                                        <h2 class="text-anime-style-2" data-cursor="-opaque">Personal <span>info</span></h2>
-                                    </div>
-                                    <!-- Section Title End -->
-                
-                                    <div class="row wow fadeInUp" data-wow-delay="0.8s">
-                                        <div class="form-group col-md-6 mb-4">
-                                            <input type="text" name="fname" class="form-control" id="fname" placeholder="First name" required>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                
-                                        <div class="form-group col-md-6 mb-4">
-                                            <input type="text" name="lname" class="form-control" id="lname" placeholder="Last name" required>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                
-                                        <div class="form-group col-md-12 mb-4">
-                                            <input type="email" name ="email" class="form-control" id="email" placeholder="Enter your e-mail" required>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                
-                                        <div class="form-group col-md-12 mb-4">
-                                            <input type="text" name="phone" class="form-control" id="phone" placeholder="Enter your phone no." required>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                
-                                        <div class="form-group col-md-12 mb-5">
-                                            <textarea name="message" class="form-control" id="message" rows="4" placeholder="Write message"></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Donar Personal Info End -->
-                    
-                                <!-- Donar Info Form Button Start -->
-                                <div class="form-group-btn wow fadeInUp" data-wow-delay="1s">
-                                    <button type="submit" class="btn-default">I donated</button>
-                                    <div id="msgSubmit" class="h3 hidden"></div>
-                                </div>
-                                <!-- Donar Info Form Button End -->
-                            </form>
-                        </div>
-                        <!-- Campaign Donation Form End -->
+                <div class="col-lg-4 col-md-6">
+                    <!-- Video Gallery Start -->
+                    <div class="video-gallery-image is-image wow fadeInUp" data-wow-delay="0.4s">
+                            <a href="https://i.postimg.cc/VvQRbrh9/L2A6687.jpg" class="popup-trigger" data-type="image">
+                           <figure>
+                                <img src="https://i.postimg.cc/VvQRbrh9/L2A6687.jpg" alt="Gallery Image">
+                            </figure>
+                        </a>
                     </div>
-                    <!-- Donation Box End -->
+                    <!-- Video Gallery End -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <!-- Video Gallery Start -->
+                    <div class="video-gallery-image is-image wow fadeInUp" data-wow-delay="0.4s">
+                            <a href="https://i.postimg.cc/KjjZBjgF/L2A6116.jpg" class="popup-trigger" data-type="image">
+                           <figure>
+                                <img src="https://i.postimg.cc/KjjZBjgF/L2A6116.jpg" alt="Gallery Image">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- Video Gallery End -->
+                </div>
+                                <div class="col-lg-4 col-md-6">
+                    <!-- Video Gallery Start -->
+                    <div class="video-gallery-image is-image wow fadeInUp" data-wow-delay="0.4s">
+                            <a href="https://i.postimg.cc/yN3JYd7J/L2A6101.jpg" class="popup-trigger" data-type="image">
+                           <figure>
+                                <img src="https://i.postimg.cc/yN3JYd7J/L2A6101.jpg" alt="Gallery Image">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- Video Gallery End -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <!-- Video Gallery Start -->
+                    <div class="video-gallery-image is-image wow fadeInUp" data-wow-delay="0.4s">
+                            <a href="https://i.postimg.cc/qv23Mrjk/L2A7064.jpg" class="popup-trigger" data-type="image">
+                           <figure>
+                                <img src="https://i.postimg.cc/qv23Mrjk/L2A7064.jpg" alt="Gallery Image">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- Video Gallery End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Video Gallery Start -->
+                   <div class="video-gallery-image is-video wow fadeInUp" data-wow-delay="0.4s">
+    <a href="https://assets.mixkit.co/videos/preview/mixkit-driving-in-a-dark-tunnel-with-bright-lights-40141-large.mp4" class="popup-trigger" data-type="video">
+        <figure>
+            <img src="https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg" alt="City Video">
+        </figure>
+    </a>
+</div>
+                    <!-- Video Gallery End -->
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Page Donation End -->
+     </div>
+    <!-- Page Video Gallery End -->
 
     <!-- Main Footer Section Start -->
     <footer class="main-footer">
@@ -265,10 +234,10 @@
                             <div class="footer-social-links">
                                 <h3>Follow on</h3>
                                 <ul>
-                                    <li><a href="donation.html#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                    <li><a href="donation.html#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="donation.html#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="donation.html#"><i class="fa-brands fa-instagram"></i></a></li>                                    								
+                                    <li><a href="video-gallery.html#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                                    <li><a href="video-gallery.html#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="video-gallery.html#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="video-gallery.html#"><i class="fa-brands fa-instagram"></i></a></li>                                    								
                                 </ul>
                             </div>
                             <!-- Footer Social Links End -->
@@ -279,7 +248,7 @@
                         <div class="footer-links-box">
                             <!-- Newsletter Form Start -->
                             <div class="newsletter-form">
-                                <form id="newsletterForm" action="donation.html#" method="POST">
+                                <form id="newsletterForm" action="video-gallery.html#" method="POST">
                                     <div class="form-group">
                                         <input type="email" name="email" class="form-control" id="mail" placeholder="Enter Your Email" required="">
                                         <button type="submit" class="newsletter-btn"><i class="fa-regular fa-paper-plane"></i></button>
@@ -292,10 +261,10 @@
                             <div class="footer-links">
                                 <h3>Quick link</h3>
                                 <ul>
-                                    <li><a href="index.html">home</a></li>
-                                    <li><a href="about.html">about us</a></li>
-                                    <li><a href="services.html">services</a></li>
-                                    <li><a href="blog.html">blog</a></li>
+                                    <li><a href="{% url 'index' %}">home</a></li>
+                                    <li><a href="{% url 'about' %}">about us</a></li>
+                                    <li><a href="{% url 'services' %}">services</a></li>
+                                    <li><a href="{% url 'blog' %}">blog</a></li>
                                 </ul>
                             </div>
                             <!-- Footer Links End -->
@@ -316,10 +285,10 @@
                             <div class="footer-links">
                                 <h3>support</h3>
                                 <ul>
-                                    <li><a href="donation.html#">help</a></li>
-                                    <li><a href="donation.html#">privacy policy</a></li>
-                                    <li><a href="donation.html#">term's & condition</a></li>
-                                    <li><a href="donation.html#">support</a></li>
+                                    <li><a href="video-gallery.html#">help</a></li>
+                                    <li><a href="video-gallery.html#">privacy policy</a></li>
+                                    <li><a href="video-gallery.html#">term's & condition</a></li>
+                                    <li><a href="video-gallery.html#">support</a></li>
                                 </ul>
                             </div>
                             <!-- Footer Links End -->
@@ -378,39 +347,102 @@
   }
 </script>
     <!-- Main Footer Section End -->
-
+   <div id="media-popup-overlay" class="image-popup-wrapper">
+    <button id="close-media-popup" class="close-popup-btn" aria-label="Close Media">&times;</button>
+    
+    <div class="popup-content-container">
+        <div id="popup-media-holder"></div>
+    </div>
+</div>
     <!-- Jquery Library File -->
-    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
     <!-- Bootstrap js file -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- Validator js file -->
-    <script src="js/validator.min.js"></script>
+    <script src="{% static 'js/validator.min.js' %}"></script>
     <!-- SlickNav js file -->
-    <script src="js/jquery.slicknav.js"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
     <!-- Swiper js file -->
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
     <!-- Counter js file -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
     <!-- Isotop js file -->
-	<script src="js/isotope.min.js"></script>
+	<script src="{% static 'js/isotope.min.js' %}"></script>
     <!-- Magnific js file -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
     <!-- SmoothScroll -->
-    <script src="js/SmoothScroll.js"></script>
+    <script src="{% static 'js/SmoothScroll.js' %}"></script>
     <!-- Parallax js -->
-    <script src="js/parallaxie.js"></script>
+    <script src="{% static 'js/parallaxie.js' %}"></script>
     <!-- MagicCursor js file -->
-    <script src="js/gsap.min.js"></script>
-    <script src="js/magiccursor.js"></script>
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/magiccursor.js' %}"></script>
     <!-- Text Effect js file -->
-    <script src="js/SplitText.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="{% static 'js/SplitText.js' %}"></script>
+    <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
     <!-- YTPlayer js File -->
-    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
     <!-- Wow js file -->
-    <script src="js/wow.min.js"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
     <!-- Main Custom js file -->
-    <script src="js/function.js"></script>
+    <script src="{% static 'js/function.js' %}"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.getElementById('media-popup-overlay');
+    const mediaHolder = document.getElementById('popup-media-holder');
+    const closeBtn = document.querySelector('.close-popup-btn');
+
+    // MENTOR STRESS TEST: Guard against missing HTML elements
+    if (!overlay || !mediaHolder || !closeBtn) {
+        console.error("CRITICAL ERROR: Modal HTML elements are missing at the bottom of your page!");
+        return; 
+    }
+
+    // Handle all clicks on links with class 'popup-trigger'
+    document.querySelectorAll('.popup-trigger').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const source = this.getAttribute('href');
+            const type = this.getAttribute('data-type');
+
+            if (type === 'video') {
+                // Generate Video Player
+                mediaHolder.innerHTML = `
+                    <video controls autoplay class="fade-in-media">
+                        <source src="${source}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>`;
+            } else {
+                // Generate Image
+                mediaHolder.innerHTML = `<img src="${source}" class="fade-in-media" alt="Zoomed View">`;
+            }
+            
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Stop page scrolling
+        });
+    });
+
+    // Close function
+    const closePopup = () => {
+        overlay.style.display = 'none';
+        mediaHolder.innerHTML = ''; // Stop video immediately
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    };
+
+    closeBtn.addEventListener('click', closePopup);
+    
+    // Close if clicking the dark background
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closePopup();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") closePopup();
+    });
+});
+    </script>
 </body>
 </html>

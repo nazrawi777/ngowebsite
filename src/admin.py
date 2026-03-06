@@ -2,6 +2,11 @@ from django.contrib import admin
 from django.utils.html import format_html
 from .models import HeroSlide, GalleryItem, BlogPost
 
+# Customize admin site header and title
+admin.site.site_header = 'Hulegeb Training & Rehabilitation'
+admin.site.site_title = 'Hulegeb Admin'
+admin.site.index_title = 'Content Management'
+
 
 @admin.register(BlogPost)
 class BlogPostAdmin(admin.ModelAdmin):

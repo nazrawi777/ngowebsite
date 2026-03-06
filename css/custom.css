@@ -550,7 +550,32 @@ header.main-header.sticky {
     
 }
 
-/* Parent menu active when submenu page is open */
+.about-us {
+    /* 1. The Background Image */
+    background-image: url('https://i.postimg.cc/d1gzNqd9/image.png');
+    
+    /* 2. Positioning & Scaling */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image fills the whole area */
+    /* 4. Stress-Testing for Readability */
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Adding an overlay if your text is hard to read */
+.about-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light white overlay */
+    z-index: -1; /* Puts it behind the text but over the image */
+}
+
+
 
     navbar-nav .submenu.active > .nav-link {
     background-color: #ff8e01;
@@ -1281,11 +1306,10 @@ header.main-header.sticky {
 /************************************/
 
 .our-services{
-	background: url('../images/our-service-bg.svg'), var(--secondary-color);
+	background: url('../images/our-service-bg.svg');
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: 100% auto;
-	padding: 100px 0;
+	
 }
 
 .service-item{

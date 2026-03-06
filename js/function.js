@@ -21,30 +21,35 @@
 
 
 $(document).ready(function () {
+    console.log("🚨 MENTOR DIAGNOSTIC: Script started successfully.");
 
-    // 1. Get the current URL segment, and STRIP the .html off it
-    var currentPage = window.location.pathname.replace(/\/$/, "").replace(".html", "").split("/").pop();
+    // 1. Get raw path and clean it (added toLowerCase to kill case-sensitivity)
+    var rawPath = window.location.pathname;
+    console.log("🚨 RAW PATH from Netlify:", rawPath);
 
-    // 2. Fix for home page
+    var currentPage = rawPath.replace(/\/$/, "").replace(".html", "").split("/").pop().toLowerCase();
+    
     if (currentPage === "" || currentPage === "index") {
         currentPage = "index";
     }
+    console.log("🚨 CLEANED CURRENT PAGE:", currentPage);
 
-    // 3. Loop through the links
+    // 2. Loop through links and log the comparison
     $('#menu a.nav-link').each(function () {
         var linkHref = $(this).attr('href');
 
-        // Ignore empty or #
         if (!linkHref || linkHref === "#") return;
 
-        // 4. STRIP the .html off the href attribute so it matches Netlify's URL
-        var linkPage = linkHref.replace(".html", "");
+        var linkPage = linkHref.replace(".html", "").toLowerCase();
+        
+        // This will print every single comparison to your console
+        console.log("Comparing link: [" + linkPage + "] with current page: [" + currentPage + "]");
 
-        // 5. The Bulletproof Comparison
         if (linkPage === currentPage) {
-            $(this).addClass('active'); // Activate link
-            $(this).closest('li').addClass('active'); // Activate LI
-            $(this).parents('.submenu').addClass('active'); // Activate parent submenu
+            console.log("✅ MATCH FOUND! Activating:", linkHref);
+            $(this).addClass('active');
+            $(this).closest('li').addClass('active');
+            $(this).parents('.submenu').addClass('active');
         }
     });
 });

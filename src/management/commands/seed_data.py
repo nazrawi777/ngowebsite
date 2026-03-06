@@ -149,6 +149,127 @@ class Command(BaseCommand):
                 'order': 9,
                 'is_active': True
             },
+            {
+                'title': 'Milling Services',
+                'media_type': 'image',
+                'image_url': 'https://iili.io/qKu7EAJ.jpg',
+                'alt_text': 'Community milling services in operation',
+                'order': 10,
+                'is_active': True
+            },
+            {
+                'title': 'Advocacy Programs',
+                'media_type': 'image',
+                'image_url': 'https://iili.io/qKulLqQ.jpg',
+                'alt_text': 'Disability rights advocacy and awareness programs',
+                'order': 11,
+                'is_active': True
+            },
+            {
+                'title': 'Artisan Production Floor',
+                'media_type': 'image',
+                'image_url': 'https://i.postimg.cc/VvQRbrh9/L2A6687.jpg',
+                'alt_text': 'Busy production floor with multiple artisans',
+                'order': 12,
+                'is_active': True
+            },
+            {
+                'title': 'Weaving Techniques',
+                'media_type': 'image',
+                'image_url': 'https://i.postimg.cc/2SsVYQLX/L2A6618.jpg',
+                'alt_text': 'Close-up of traditional weaving techniques',
+                'order': 13,
+                'is_active': True
+            },
+            {
+                'title': 'Finished Products Display',
+                'media_type': 'image',
+                'image_url': 'https://i.postimg.cc/SRHp9rhc/L2A5446.jpg',
+                'alt_text': 'Display of finished handcrafted products',
+                'order': 14,
+                'is_active': True
+            },
+            {
+                'title': 'Woodworking Workshop',
+                'media_type': 'image',
+                'image_url': 'https://iili.io/qKu8fXV.jpg',
+                'alt_text': 'Carpenters working on custom furniture pieces',
+                'order': 15,
+                'is_active': True
+            },
+            {
+                'title': 'Quality Control',
+                'media_type': 'image',
+                'image_url': 'https://iili.io/qKIp6fn.jpg',
+                'alt_text': 'Quality inspection of finished products',
+                'order': 16,
+                'is_active': True
+            },
+            {
+                'title': 'Team Collaboration',
+                'media_type': 'image',
+                'image_url': 'https://iili.io/qKTRuYG.jpg',
+                'alt_text': 'Artisans collaborating on a project',
+                'order': 17,
+                'is_active': True
+            },
+            {
+                'title': 'Traditional Loom Work',
+                'media_type': 'image',
+                'image_url': 'https://iili.io/qKu4fF2.jpg',
+                'alt_text': 'Artisan working on traditional hand loom',
+                'order': 18,
+                'is_active': True
+            },
+            {
+                'title': 'Product Packaging',
+                'media_type': 'image',
+                'image_url': 'https://iili.io/qKutxCF.jpg',
+                'alt_text': 'Careful packaging of handcrafted products',
+                'order': 19,
+                'is_active': True
+            },
+            {
+                'title': 'Training New Artisans',
+                'media_type': 'image',
+                'image_url': 'https://iili.io/qKAHNJn.jpg',
+                'alt_text': 'Experienced artisan training new team members',
+                'order': 20,
+                'is_active': True
+            },
+            {
+                'title': 'Brush Making Workshop',
+                'media_type': 'image',
+                'image_url': 'https://iili.io/qKuzPpV.jpg',
+                'alt_text': 'Production of household brushes and cleaning tools',
+                'order': 21,
+                'is_active': True
+            },
+            {
+                'title': 'Carpet Weaving Detail',
+                'media_type': 'image',
+                'image_url': 'https://i.postimg.cc/yN3JYd7J/L2A6101.jpg',
+                'alt_text': 'Intricate detail work on hand-woven carpet',
+                'order': 22,
+                'is_active': True
+            },
+            {
+                'title': 'Workshop Facilities',
+                'media_type': 'image',
+                'image_url': 'https://i.postimg.cc/KjjZBjgF/L2A6116.jpg',
+                'alt_text': 'Modern workshop facilities and equipment',
+                'order': 23,
+                'is_active': True
+            },
+            {
+                'title': 'Artisan Pride',
+                'media_type': 'image',
+                'image_url': 'https://iili.io/qKu7EAJ.jpg',
+                'alt_text': 'Artisan proudly displaying finished work',
+                'order': 24,
+                'is_active': True
+            },
+          
         ]
         
         for data in gallery_items_data:
@@ -302,7 +423,99 @@ Hulegeb has been doing this work for 70 years. We've proven it's possible. Now i
                 'is_published': True,
                 'is_featured': False,
                 'meta_description': 'Explore how Hulegeb connects disability rights with economic justice through employment and fair wages for people with disabilities.'
-            }
+            },
+            {
+    'title': 'Skill Over Sympathy: Why Training Changes Everything',
+    'slug': 'skill-over-sympathy-training-changes-everything',
+    'excerpt': 'Why vocational training is the most powerful tool for building independence among people with disabilities.',
+    'content': '''At Hulegeb, the focus has always been on skills rather than sympathy. While charity may provide short-term relief, real independence comes from learning a trade and mastering a craft.
+
+        For new trainees arriving at Hulegeb, the first lesson is often the most important: ability matters more than disability. Each trainee is introduced to practical vocational skills—from weaving and carpentry to milling and workshop operations.
+
+        Training is hands-on and mentorship-driven. Experienced artisans guide trainees through each step of the process, ensuring they develop not only technical skills but also confidence.
+
+        Over time, trainees discover something powerful: their work has value. A carpet woven with patience and precision becomes a product someone is willing to buy. A carefully crafted chair becomes part of someone's home.
+
+        This realization changes everything. Instead of seeing themselves as dependent on support, trainees begin to see themselves as skilled workers capable of earning a living.
+
+        At Hulegeb, training is not just about employment—it's about transforming identity from recipient to creator.''',
+            'featured_image_url': 'https://iili.io/qKutxCF.jpg',
+            'image_alt': 'Vocational training session at Hulegeb',
+            'author': 'Hulegeb Team',
+            'published_date': date.today() - timedelta(days=25),
+            'is_published': True,
+            'is_featured': False,
+            'meta_description': 'Learn how vocational training empowers people with disabilities to build independence and meaningful careers at Hulegeb.'
+        },
+        {
+            'title': 'Craftsmanship That Tells a Story',
+            'slug': 'craftsmanship-that-tells-a-story',
+            'excerpt': 'Every handmade product at Hulegeb carries the story of skill, perseverance, and dignity.',
+            'content': '''Every product created at Hulegeb carries more than just material value—it carries a story.
+
+        A hand-woven carpet may take days to complete. Each thread is carefully placed, each pattern formed with practiced hands. For the artisan who created it, the finished product represents dedication, patience, and pride.
+
+        Customers often admire the beauty and durability of these handcrafted goods. What they may not immediately see is the deeper story behind them: the story of individuals who overcame barriers to become skilled professionals.
+
+        Craftsmanship at Hulegeb reflects the belief that quality speaks louder than stereotypes. When someone buys a piece of furniture or a woven carpet from Hulegeb, they are choosing a product that stands on its own merit.
+
+        This is the power of craftsmanship—it allows skill to speak for itself.
+
+        For the artisans, every completed piece is proof that their abilities define them far more than their disabilities ever could.''',
+            'featured_image_url': 'https://iili.io/qKu8fXV.jpg',
+            'image_alt': 'Handcrafted carpet made by Hulegeb artisans',
+            'author': 'Hulegeb Team',
+            'published_date': date.today() - timedelta(days=30),
+            'is_published': True,
+            'is_featured': False,
+            'meta_description': 'Discover the stories behind the handcrafted products made by skilled artisans at Hulegeb.'
+        },
+        {
+            'title': 'Community Impact: Beyond the Workshop Walls',
+            'slug': 'community-impact-beyond-workshop-walls',
+            'excerpt': 'How Hulegeb’s work benefits families, communities, and the broader economy.',
+            'content': '''The impact of Hulegeb extends far beyond the walls of its workshops.
+
+        When a person with a disability gains stable employment, the benefits ripple outward. Families experience greater financial security. Communities gain skilled workers and entrepreneurs. Local markets benefit from quality products and services.
+
+        For many artisans, employment at Hulegeb allows them to support relatives, contribute to household expenses, and participate fully in community life.
+
+        The social impact is just as significant as the economic one. As communities witness people with disabilities working, producing, and earning wages, long-standing stereotypes begin to fade.
+
+        This visibility helps change attitudes about disability. Instead of seeing limitations, people begin to see capability and contribution.
+
+        Through employment, training, and enterprise, Hulegeb demonstrates that inclusion is not only the right thing to do—it strengthens communities as a whole.''',
+            'featured_image_url': 'https://i.postimg.cc/yN3JYd7J/L2A6101.jpg',
+            'image_alt': 'Community members interacting with Hulegeb artisans',
+            'author': 'Hulegeb Team',
+            'published_date': date.today() - timedelta(days=35),
+            'is_published': True,
+            'is_featured': False,
+            'meta_description': 'Explore how Hulegeb creates positive economic and social impact for families and communities.'
+        },
+        {
+            'title': 'Redefining Ability Through Work',
+            'slug': 'redefining-ability-through-work',
+            'excerpt': 'Employment changes how society views disability—and how individuals view themselves.',
+            'content': '''Work has the power to transform not only lives but also perceptions.
+
+        At Hulegeb, artisans with visual and physical disabilities demonstrate daily that ability is not defined by physical limitations. Through craftsmanship, discipline, and dedication, they challenge the assumptions that often surround disability.
+
+        Employment offers more than income. It provides purpose, routine, and the confidence that comes from contributing meaningfully to society.
+
+        When customers purchase a Hulegeb product, they often become part of a larger story—one where talent and determination overcome barriers.
+
+        For the artisans themselves, the transformation is deeply personal. Work brings independence, pride, and a renewed sense of identity.
+
+        By redefining ability through meaningful work, Hulegeb continues to prove that inclusion benefits everyone.''',
+            'featured_image_url': 'https://iili.io/qKuzPpV.jpg',
+            'image_alt': 'Artisans collaborating in workshop',
+            'author': 'Hulegeb Team',
+            'published_date': date.today() - timedelta(days=40),
+            'is_published': True,
+            'is_featured': False,
+            'meta_description': 'See how employment and craftsmanship help redefine ability and promote inclusion.'
+        }
         ]
         
         for data in blog_posts_data:

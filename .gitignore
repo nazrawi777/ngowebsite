@@ -141,3 +141,5 @@ logs/
 *.seed
 *.pid.lock
 docker-compose.override.yml
+
+docs/

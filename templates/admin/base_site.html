@@ -3,6 +3,12 @@
 
 {% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | Hulegeb Admin{% endblock %}
 
+{% block extrahead %}
+{{ block.super }}
+<link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/hjxJwj9v/Hulegeb-Training-Rehabilitation-Logo-2.png">
+<link rel="icon" type="image/png" href="https://i.postimg.cc/hjxJwj9v/Hulegeb-Training-Rehabilitation-Logo-2.png">
+{% endblock %}
+
 {% block branding %}
 <div id="site-name" style="display: flex; align-items: center; padding: 10px 20px; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
     <img src="https://i.postimg.cc/hjxJwj9v/Hulegeb-Training-Rehabilitation-Logo-2.png" 

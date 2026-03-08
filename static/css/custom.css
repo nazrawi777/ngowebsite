@@ -463,7 +463,7 @@ header.main-header {
     top: 1%;
     /* CHANGED: 3% instead of 5% moves it slightly left */
     left: 3%; 
-    width: 90%;
+    width: 94%;
     
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
@@ -481,7 +481,7 @@ header.main-header.sticky {
     position: fixed;
     top: 10px;
     left: 3%; /* Keep it consistent with the non-sticky state */
-    width: 94%; /* Slightly wider when sticky if you like */
+    width: 96%; /* Slightly wider when sticky if you like */
 }
 
 @media (max-width: 991px) {
@@ -509,19 +509,22 @@ header.main-header.sticky {
 
 
 .navbar{
-	padding: 20px 0;
+	padding: 0px 0;
 	align-items: center;
 }
 
 .navbar-brand{
-	padding: 0;
+	padding: 0px;
 	margin: 0;
+	width: 20%;
 }
-
+.navbar-brand img{
+	width: 100%;
+}
 .main-menu .nav-menu-wrapper{
 	flex: 1;
 	text-align: center;
-	margin: 0 20px;
+	margin: 0 1px;
 }
 
 .main-menu .nav-menu-wrapper > ul{
@@ -547,7 +550,58 @@ header.main-header.sticky {
     
 }
 
-/* Parent menu active when submenu page is open */
+.about-us {
+    /* 1. The Background Image */
+    background-image: url('https://i.postimg.cc/d1gzNqd9/image.png');
+    
+    /* 2. Positioning & Scaling */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image fills the whole area */
+    /* 4. Stress-Testing for Readability */
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Adding an overlay if your text is hard to read */
+.about-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light white overlay */
+    z-index: -1; /* Puts it behind the text but over the image */
+}
+
+
+.what-we-do {
+    /* 1. The Background Image */
+    background-image: url('');
+    
+    /* 2. Positioning & Scaling */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image fills the whole area */
+    /* 4. Stress-Testing for Readability */
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Adding an overlay if your text is hard to read */
+.what-we-do::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light white overlay */
+    z-index: -1; /* Puts it behind the text but over the image */
+}
+
+
 
     navbar-nav .submenu.active > .nav-link {
     background-color: #ff8e01;
@@ -1278,11 +1332,10 @@ header.main-header.sticky {
 /************************************/
 
 .our-services{
-	background: url('../images/our-service-bg.svg'), var(--secondary-color);
+	background: url('../images/our-service-bg.svg');
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: 100% auto;
-	padding: 100px 0;
+	
 }
 
 .service-item{

@@ -20,34 +20,39 @@
 
 
 
-    $(document).ready(function () {
+$(document).ready(function () {
+    console.log("🚨 MENTOR DIAGNOSTIC: Script started successfully.");
 
-        var currentPage = window.location.pathname.split("/").pop();
+    // 1. Get raw path and clean it (added toLowerCase to kill case-sensitivity)
+    var rawPath = window.location.pathname;
+    console.log("🚨 RAW PATH from Netlify:", rawPath);
 
-        // Fix for home page
-        if (currentPage === "" || currentPage === "/") {
-            currentPage = "index.html";
+    var currentPage = rawPath.replace(/\/$/, "").replace(".html", "").split("/").pop().toLowerCase();
+    
+    if (currentPage === "" || currentPage === "index") {
+        currentPage = "index";
+    }
+    console.log("🚨 CLEANED CURRENT PAGE:", currentPage);
+
+    // 2. Loop through links and log the comparison
+    $('#menu a.nav-link').each(function () {
+        var linkHref = $(this).attr('href');
+
+        if (!linkHref || linkHref === "#") return;
+
+        var linkPage = linkHref.replace(".html", "").toLowerCase();
+        
+        // This will print every single comparison to your console
+        console.log("Comparing link: [" + linkPage + "] with current page: [" + currentPage + "]");
+
+        if (linkPage === currentPage) {
+            console.log("✅ MATCH FOUND! Activating:", linkHref);
+            $(this).addClass('active');
+            $(this).closest('li').addClass('active');
+            $(this).parents('.submenu').addClass('active');
         }
-
-        $('#menu a.nav-link').each(function () {
-            var linkPage = $(this).attr('href');
-
-            // Ignore empty or #
-            if (!linkPage || linkPage === "#") return;
-
-            if (linkPage === currentPage) {
-                // Activate current link
-                $(this).addClass('active');
-
-                // Activate LI
-                $(this).closest('li').addClass('active');
-
-                // Activate parent submenu if exists
-                $(this).parents('.submenu').addClass('active');
-            }
-        });
-
     });
+});
 
 
 
